@@ -5,8 +5,7 @@
  */
 package Entity;
 
-import java.io.File;
-import java.util.List;
+
 
 /**
  *
@@ -18,35 +17,16 @@ public class Produit {
     private float prix;
     private int quantite;
     private String description;
-    private List<File> images;
+    private String image1;
+    private String image2;
     private String type;
 
     public int getId_produit() {
         return id_produit;
     }
 
-    public Produit(String libelle, float prix, int quantite, String description, List<File> images, String type) {
-        this.libelle = libelle;
-        this.prix = prix;
-        this.quantite = quantite;
-        this.description = description;
-        this.images = images;
-        this.type = type;
-    }
+ 
 
-    public Produit(int id_produit, String libelle, float prix, int quantite, String description, String type) {
-        this.id_produit = id_produit;
-        this.libelle = libelle;
-        this.prix = prix;
-        this.quantite = quantite;
-        this.description = description;
-        this.type = type;
-    }
-
-    @Override
-    public String toString() {
-        return "Produit{" + "id_produit=" + id_produit + ", libelle=" + libelle + ", prix=" + prix + ", quantite=" + quantite + ", description=" + description + ", images=" + images + ", type=" + type + '}';
-    }
 
     public void setId_produit(int id_produit) {
         this.id_produit = id_produit;
@@ -84,13 +64,7 @@ public class Produit {
         this.description = description;
     }
 
-    public List<File> getImages() {
-        return images;
-    }
 
-    public void setImages(List<File> images) {
-        this.images = images;
-    }
 
     public String getType() {
         return type;
@@ -98,6 +72,38 @@ public class Produit {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getImage1() {
+        return image1;
+    }
+
+    public void setImage1(String image1) {
+        this.image1 = image1;
+    }
+
+    public String getImage2() {
+        return image2;
+    }
+
+    public void setImage2(String image2) {
+        this.image2 = image2;
+    }
+
+    public Produit(int id_produit, String libelle, float prix, int quantite, String description, String image1, String image2, String type) {
+        this.id_produit = id_produit;
+        this.libelle = libelle;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.description = description;
+        this.image1 = image1;
+        this.image2 = image2;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Produit{" + "id_produit=" + id_produit + ", libelle=" + libelle + ", prix=" + prix + ", quantite=" + quantite + ", description=" + description + ", image1=" + image1 + ", image2=" + image2 + ", type=" + type + '}';
     }
     
 }
