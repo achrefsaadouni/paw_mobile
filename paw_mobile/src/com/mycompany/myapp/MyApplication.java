@@ -30,7 +30,7 @@ public class MyApplication {
     private Form current;
     private Resources theme;
     
-    public static Utilisateur membre;
+    
 
     public void init(Object context) {
         theme = UIManager.initFirstTheme("/theme");
