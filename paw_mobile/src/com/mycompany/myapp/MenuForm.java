@@ -49,7 +49,7 @@ public class MenuForm {
         menu.getToolbar().addCommandToOverflowMenu("Réclamation", null, (e)
                 -> {
                 ReclamationForm rf = new ReclamationForm();
-                rf.afficher("Vetements");
+                rf.afficher();
                 }
         );
 
