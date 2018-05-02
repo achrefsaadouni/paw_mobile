@@ -3,6 +3,7 @@
 <resource majorVersion="1" minorVersion="7" useXmlUI="false">
     <image name="back-command.png" type="multi"  />
     <image name="border.png"  />
+    <image name="boutiqueItems.png"  />
     <image name="Button.dis#borderBottom_1.png" type="multi"  />
     <image name="Button.dis#borderBottomL_1.png" type="multi"  />
     <image name="Button.dis#borderBottomR_1.png" type="multi"  />
@@ -43,6 +44,7 @@
     <image name="Dialog.borderTop_1.png" type="multi"  />
     <image name="Dialog.borderTopL_1.png" type="multi"  />
     <image name="Dialog.borderTopR_1.png" type="multi"  />
+    <image name="image.png"  />
     <image name="libelle.png"  />
     <image name="Menu.borderBottom_2.png" type="multi"  />
     <image name="Menu.borderBottomL_2.png" type="multi"  />
@@ -62,6 +64,7 @@
     <image name="OKGR.borderTop_1.png" type="multi"  />
     <image name="OKGR.borderTopL_1.png" type="multi"  />
     <image name="OKGR.borderTopR_1.png" type="multi"  />
+    <image name="place.png"  />
     <image name="price.png"  />
     <image name="round.png" type="multi"  />
     <image name="sliderBlueCenter.png" type="multi"  />
