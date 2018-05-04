@@ -26,15 +26,19 @@ public class ServiceUtilisateur {
     public void ajoutUtilisateur(Utilisateur ta) {
         ConnectionRequest con = new ConnectionRequest();
         String Url = "http://localhost/paw_web/web/app_dev.php/api/Inscription?nom=" + ta.getNom() + "&prenom=" + ta.getPrenom()+ "&adresse=" + ta.getAddresse()+ "&email=" + ta.getEmail()+ "&sexe=" + ta.getSexe()+ "&username=" + ta.getUsername()+ "&numero=" + ta.getNumero()+ "&avatar=" + ta.getAvatar()+ "&password=" + ta.getPassword();
-        System.out.println(Url);
         con.setUrl(Url);
-        Boolean test = false ;
-        //System.out.println("tt");
+        con.addResponseListener((e) -> {
+            String str = new String(con.getResponseData());
+        });
+        NetworkManager.getInstance().addToQueueAndWait(con);
+    }
+    public void MAJUtilisateur(Utilisateur ta) {
+        ConnectionRequest con = new ConnectionRequest();
+        String Url = "http://localhost/paw_web/web/app_dev.php/api/MiseAjourUtilisateur?nom=" + ta.getNom() + "&prenom=" + ta.getPrenom()+ "&adresse=" + ta.getAddresse()+ "&email=" + ta.getEmail()+ "&sexe=" + ta.getSexe()+ "&username=" + ta.getUsername()+ "&numero=" + ta.getNumero()+ "&avatar=" + ta.getAvatar()+ "&password=" + ta.getPassword()+"&id=" + Utilisateur.membre.getId();
+        con.setUrl(Url);
 
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());
-            //System.out.println(str);
-
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
     }
@@ -44,25 +48,22 @@ public class ServiceUtilisateur {
         ArrayList<Utilisateur> listUsers = new ArrayList<>();
 
         try {
-            //System.out.println(json);
             JSONParser j = new JSONParser();
 
-            Map<String, Object> etudiants = j.parseJSON(new CharArrayReader(json.toCharArray()));
-            //System.out.println(etudiants);
-           
+            Map<String, Object> etudiants = j.parseJSON(new CharArrayReader(json.toCharArray()));  
             List<Map<String, Object>> list = (List<Map<String, Object>>) etudiants.get("root");
-
             for (Map<String, Object> obj : list) {
                 Utilisateur e = new Utilisateur();
-
-                // System.out.println(obj.get("id"));
                 float id = Float.parseFloat(obj.get("id").toString());
+                float numero = Float.parseFloat(obj.get("numero").toString());
                 e.setId((int) id);
+                e.setNumero((int) numero);
                 e.setAdresse(obj.get("addresse").toString());
                 e.setPrenom(obj.get("prenom").toString());
                 e.setNom(obj.get("nom").toString());
                 e.setSexe(obj.get("sexe").toString());
                 e.setEmail(obj.get("email").toString());
+                e.setAvatar(obj.get("avatar").toString());
                 e.setUsername(obj.get("username").toString());
                 e.setPassword(obj.get("password").toString());
                 listUsers.add(e);
@@ -71,7 +72,6 @@ public class ServiceUtilisateur {
 
         } catch (IOException ex) {
         }
-        //System.out.println(listUsers);
         return listUsers;
 
     }
@@ -81,7 +81,7 @@ public class ServiceUtilisateur {
     
     public ArrayList<Utilisateur> getList2(){       
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://localhost/paw_web/web/app_dev.php/api/Connexion");  
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/api/Connexion");   
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
@@ -90,7 +90,6 @@ public class ServiceUtilisateur {
             }
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
-        //listUtilisateurs.forEach(e -> System.out.println(e));
         return listUtilisateurs;
     }
 

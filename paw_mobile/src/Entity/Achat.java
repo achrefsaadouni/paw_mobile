@@ -15,7 +15,7 @@ import java.util.List;
 public class Achat {
     
     private int id_achat;
-    private int id_client;
+    private Utilisateur user;
     private List<LigneAchat> list;
     private Date date_achat;
     private double prix;
@@ -29,13 +29,7 @@ public class Achat {
         this.list = list;
     }
 
-    public Achat(int id_achat, int id_client, Date date_achat, float prix, String etat) {
-        this.id_achat = id_achat;
-        this.id_client = id_client;
-        this.date_achat = date_achat;
-        this.prix = prix;
-        this.etat = etat;
-    }
+  
 
     public double getPrix() {
         return prix;
@@ -45,21 +39,6 @@ public class Achat {
         this.prix = prix;
     }
 
-    public Achat(int id_achat, int id_client, List<LigneAchat> list, Date date_achat, double prix,String etat) {
-        this.id_achat = id_achat;
-        this.id_client = id_client;
-        this.list = list;
-        this.date_achat = date_achat;
-        this.prix = prix;
-        this.etat=etat;
-    }
-
-
-    public Achat(int id_client, double prix,List<LigneAchat> liste) {
-        this.id_client = id_client;
-        this.prix = prix;
-        this.list=liste;
-    }
 
     
     
@@ -71,13 +50,7 @@ public class Achat {
         this.id_achat = id_achat;
     }
 
-    public int getId_client() {
-        return id_client;
-    }
-
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
-    }
+ 
 
     public Date getDate_achat() {
         return date_achat;
@@ -87,10 +60,6 @@ public class Achat {
         this.date_achat = date_achat;
     }
 
-    public Achat(int id_client, Date date_achat) {
-        this.id_client = id_client;
-        this.date_achat = date_achat;
-    }
 
     public String getEtat() {
         return etat;
@@ -100,10 +69,23 @@ public class Achat {
         this.etat = etat;
     }
 
-    @Override
-    public String toString() {
-        return "Achat{" + "id_achat=" + id_achat + ", id_client=" + id_client + ", list=" + list + ", date_achat=" + date_achat + ", prix=" + prix + ", etat=" + etat + '}';
+    public Utilisateur getUser() {
+        return user;
     }
+
+    public void setUser(Utilisateur user) {
+        this.user = user;
+    }
+
+    public Achat(int id_achat, Utilisateur user, List<LigneAchat> list, Date date_achat, double prix, String etat) {
+        this.id_achat = id_achat;
+        this.user = user;
+        this.list = list;
+        this.date_achat = date_achat;
+        this.prix = prix;
+        this.etat = etat;
+    }
+
     
     
 }

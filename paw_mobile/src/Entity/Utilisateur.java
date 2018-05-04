@@ -24,6 +24,7 @@ public class Utilisateur {
     private String avatar;
     private String code;
     private String confirmed;
+    public static Utilisateur membre;
 
     public Utilisateur() {
     }

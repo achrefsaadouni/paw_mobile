@@ -25,9 +25,9 @@ public class ServiceReclamation {
 
     public void ajoutReclamation(Reclamation ta) {
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://41.226.11.243:10004/Reclamations/" + ta.getObjet() + "/" + ta.getText()+ "/" + ta.getType();
+        String Url = "http://localhost/paw_web/web/app_dev.php/api/AjoutFeedBack?objet=" + ta.getObjet() + "&text=" + ta.getText()+ "&type=" + ta.getType()+ "&utilisateur=" + ta.getUtilisateur();
         con.setUrl(Url);
-
+        System.out.println(Url);
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());
         });
@@ -73,7 +73,9 @@ public class ServiceReclamation {
     
     public ArrayList<Reclamation> getList2(int id){       
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://localhost/web/web/app_dev.php/api/Reclamation/"+id);  
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/api/Reclamation/"+id);  
+                //System.out.println(Url);
+
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {

@@ -7,9 +7,10 @@ package com.mycompany.myapp;
 
 import com.codename1.ui.Form;
 import com.codename1.ui.util.Resources;
+import forms.FeedBack.AjoutFeedBackForm;
 import forms.boutique.BoutiqueForm;
 import forms.boutique.PanierForm;
-import forms.reclamation.ReclamationForm;
+import forms.annonceAmine.Ajout;
 import forms.utilisateur.ProfileForm;
 import forms.veterinaire.AfficheVeterinaire;
 import forms.veterinaire.VeterinaireForm;
@@ -45,12 +46,12 @@ public class MenuForm {
         menu.getToolbar().addCommandToOverflowMenu("Profile", null, (e)
                 -> {
                 ProfileForm pf = new ProfileForm();
-                pf.afficher();
+                pf.affiche();
                 }
         );
-        menu.getToolbar().addCommandToOverflowMenu("Réclamation", null, (e)
+        menu.getToolbar().addCommandToOverflowMenu("FeedBack", null, (e)
                 -> {
-                ReclamationForm rf = new ReclamationForm();
+                AjoutFeedBackForm rf = new AjoutFeedBackForm();
                 rf.afficher();
                 }
         );
@@ -61,7 +62,13 @@ public class MenuForm {
                 }
         );
 
-        
+         menu.getToolbar().addCommandToOverflowMenu("Amine", null, (e)
+                -> {
+                  Ajout h = new Ajout(theme);
+        h.getF().show();
+                }
+        );
+      
        menu.show();
     }
     

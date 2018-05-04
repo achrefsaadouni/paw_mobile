@@ -5,6 +5,7 @@
  */
 package forms.veterinaire;
 
+import static Entity.Utilisateur.membre;
 import Entity.Veterinaire;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.SpanLabel;
@@ -36,7 +37,6 @@ import com.codename1.ui.geom.Dimension;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.plaf.Border;
 import com.codename1.ui.plaf.Style;
-import static com.mycompany.myapp.MyApplication.membre;
 
 /**
  *

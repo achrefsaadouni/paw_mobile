@@ -95,7 +95,7 @@ public class SignupFb {
                 ServiceUtilisateur userservice = new ServiceUtilisateur();
                 Utilisateur newuser = new Utilisateur(nom.getText(), prenom.getText(), adresse.getText(), email.getText(), sexe.getSelectedItem(), Integer.parseInt(numero.getText()), avatar.getText(), pswd.getText(), username.getText());
                 userservice.ajoutUtilisateur(newuser);      
-                MyApplication.membre=newuser;
+               Utilisateur.membre=newuser;
                 //************page lgin**************//
             }
         });

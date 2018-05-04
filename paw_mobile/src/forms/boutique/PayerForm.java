@@ -37,13 +37,16 @@ public class PayerForm {
         payerCompte.addActionListener((evt) -> {
             
             paymentMethodeDialog.dispose();
-            System.out.println("livraisson");
+            LivraisonForm lf = new LivraisonForm(theme);
+            lf.affiche();
+            
         });
         
         payerStripe.addActionListener((evt) -> {
           
             paymentMethodeDialog.dispose();
-            System.out.println("stripe");
+            StripeForm sf = new StripeForm(theme);
+                    sf.show();
         });
         
         annuler.addActionListener((evt) -> {

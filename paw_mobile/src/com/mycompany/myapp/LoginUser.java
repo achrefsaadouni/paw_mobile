@@ -6,6 +6,7 @@
 package com.mycompany.myapp;
 
 import Entity.Utilisateur;
+import static Entity.Utilisateur.membre;
 import com.codename1.ui.Button;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.Form;
@@ -13,7 +14,6 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
-import static com.mycompany.myapp.MyApplication.membre;
 import forms.boutique.BoutiqueForm;
 import forms.boutique.PanierForm;
 import java.util.ArrayList;
