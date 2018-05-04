@@ -4,23 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Panier.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/PayerForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/util/FacebookLogin.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/DetailsForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/com/mycompany/myapp/SignupFb.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Produit.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Utilisateur.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/service/ServiceUtilisateur.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/RepRec.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/service/ServiceReclamation.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/com/mycompany/myapp/LoginUser.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Reclamation.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/BoutiqueForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/com/mycompany/myapp/Signup.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/PanierForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/util/MenuManager.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/VeterinaireForm.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/com/mycompany/myapp/LoginUser.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/Entity/Veterinaire.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/service/ServiceVeterinaire.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/AfficheVeterinaire.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/Position.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/service/ServiceUtilisateur.java</file>
+            <file>jar:file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/lib/CodenameOne_SRC.zip!/com/codename1/ui/Slider.java</file>
         </group>
     </open-files>
 </project-private>

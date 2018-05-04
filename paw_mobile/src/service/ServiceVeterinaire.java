@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package service;
 
 /**
@@ -42,6 +43,8 @@ public class ServiceVeterinaire {
                 // System.out.println(obj.get("id"));
                 float id = Float.parseFloat(obj.get("id").toString());
                 float numero = Float.parseFloat(obj.get("numero").toString()) ;
+                float longitude = Float.parseFloat(obj.get("longitude").toString()) ;
+                float latitude = Float.parseFloat(obj.get("latitude").toString()) ;
                 System.out.println(id);
                 v.setId((int) id);
                 
@@ -51,6 +54,10 @@ public class ServiceVeterinaire {
                 v.setPrenom(obj.get("prenom").toString());
                 v.setAdresse(obj.get("adresse").toString());
                 v.setRegion(obj.get("region").toString());
+                v.setImages(obj.get("images").toString());
+                v.setEmail(obj.get("email").toString());
+                v.setLatitude(latitude);
+                v.setLongitude(longitude);
                 v.setNumero((int) numero);
                 
                 System.out.println(v);
@@ -70,7 +77,7 @@ public class ServiceVeterinaire {
     
     public ArrayList<Veterinaire> getList2(){       
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://localhost/paw_web/web/app_dev.php/listerVeterinaire/");  
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/listerVeterinaire");  
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
@@ -80,5 +87,19 @@ public class ServiceVeterinaire {
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
         return listVets;
+    }
+    
+    public void rating(int valeur, int id_utilisateur, int id_veterinaire){       
+        ConnectionRequest con = new ConnectionRequest();
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/rate?valeur="+valeur+"&id_utilisateur="+id_utilisateur+"&id_veterinaire="+id_veterinaire);  
+        con.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+               
+                String s = new String(con.getResponseData());
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(con);
+
     }
 }

@@ -11,6 +11,8 @@ import forms.boutique.BoutiqueForm;
 import forms.boutique.PanierForm;
 import forms.reclamation.ReclamationForm;
 import forms.utilisateur.ProfileForm;
+import forms.veterinaire.AfficheVeterinaire;
+import forms.veterinaire.VeterinaireForm;
 
 /**
  *
@@ -50,6 +52,12 @@ public class MenuForm {
                 -> {
                 ReclamationForm rf = new ReclamationForm();
                 rf.afficher();
+                }
+        );
+        menu.getToolbar().addCommandToOverflowMenu("Vétérinaire", null, (e)
+                -> {
+                AfficheVeterinaire vf = new AfficheVeterinaire();
+                
                 }
         );
 
