@@ -45,7 +45,8 @@ public class PayerForm {
         payerStripe.addActionListener((evt) -> {
           
             paymentMethodeDialog.dispose();
-            System.out.println("stripe");
+            StripeForm sf = new StripeForm(theme);
+                    sf.show();
         });
         
         annuler.addActionListener((evt) -> {

@@ -9,7 +9,9 @@
     </component>
     <component type="TextField" name="ExpYear" cloudBoundProperty="text" cloudDestinationProperty="ExpYear" uiid="Input" text="" hint="Ann&#xe9;e d'expiration" hintIcon="annual.png" >
     </component>
-    <component type="TextField" name="ExpMonth" cloudBoundProperty="text" cloudDestinationProperty="ExpMonth" uiid="Input" text="" hint="Mois d'expiration .." hintIcon="weekly-calendar.png" >
+    <component type="TextField" name="ExpMonth" cloudBoundProperty="text" cloudDestinationProperty="ExpMonth" uiid="Input" text="" hint="Mois d'expiration .." hintIcon="calendar (1).png" >
+    </component>
+    <component type="TextField" name="cvv" cloudBoundProperty="text" cloudDestinationProperty="cvv" uiid="Input" text="" hint="CVV.." hintIcon="binary-code.png" >
     </component>
     <component type="Button" name="Valider" cloudDestinationProperty="Valider" uiid="TransparentButtonWhite" text="Valider" icon="credit-card (1).png" gap="10" >
     </component>

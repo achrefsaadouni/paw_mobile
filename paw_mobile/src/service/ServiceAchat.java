@@ -46,7 +46,7 @@ public class ServiceAchat {
         return this.code;
     }
 
-    public String Payer() {
+    public String Payer(String status) {
         String id = "";
         String nbr = "";
         ConnectionRequest con = new ConnectionRequest();
@@ -56,7 +56,7 @@ public class ServiceAchat {
         }
         id = id.substring(0, id.length() - 1);
         nbr = nbr.substring(0, nbr.length() - 1);
-        con.setUrl("http://localhost/paw_web/web/app_dev.php/mobile/payer?id=" + id + "&nbr=" + nbr+"&user="+Utilisateur.membre.getId());
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/mobile/payer?id=" + id + "&nbr=" + nbr+"&user="+Utilisateur.membre.getId()+"&status="+status);
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {

@@ -61,9 +61,10 @@ public class LivraisonForm {
         poursuivre.addActionListener((evt) -> {
             if (code.equals(passcode.getText())) {
                 Dialog ip = new InfiniteProgress().showInifiniteBlocking();
-                ip.setTimeout(1000);
-                sa.Payer();
+                
+                sa.Payer("Non Payer");
                 Panier.panier.clear();
+                ip.setTimeout(1000);
                 Dialog.show("Succés", "Votre Achat a été enregistrer", "OK", null);
                 PanierForm pf = new PanierForm(theme);
                 pf.affichePanier();

@@ -4,9 +4,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/PayerForm.java</file>
             <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/LivraisonForm.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/utilisateur/EditProfile.java</file>
             <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/service/ServiceAchat.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/utilisateur/ProfileForm.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Utilisateur.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/StripeForm.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/FeedBack/AjoutFeedBackForm.java</file>
+            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Veterinaire.java</file>
         </group>
     </open-files>
 </project-private>
