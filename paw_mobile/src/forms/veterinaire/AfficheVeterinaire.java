@@ -5,6 +5,7 @@
  */
 package forms.veterinaire;
 
+import Entity.RateVet;
 import static Entity.Utilisateur.membre;
 import Entity.Veterinaire;
 import com.codename1.components.ImageViewer;
@@ -56,8 +57,18 @@ public class AfficheVeterinaire {
         ServiceVeterinaire service = new ServiceVeterinaire();
         //lb.setText(service.getList2().toString());
         ArrayList<Veterinaire> lv = service.getList2();
+        ArrayList<RateVet> rv = service.getListVotes();
+        
         for (Veterinaire vet : lv) {
-            f.add(addItem(vet));
+            RateVet sonRate=null ;
+            for (RateVet r : rv) {
+                if(r.getId_vet()==vet.getId())
+                {
+                    sonRate=r;
+                    
+                }
+            }
+            f.add(addItem(vet,sonRate));
         }
 
         f.getToolbar().addCommandToRightBar("back", null, (ev) -> {
@@ -68,7 +79,7 @@ public class AfficheVeterinaire {
         f.show();
     }
 
-    public Container addItem(Veterinaire v) {
+    public Container addItem(Veterinaire v,RateVet sonRate ) {
         Container c = new Container(BoxLayout.x());
         Container c1 = new Container(BoxLayout.x());
         Container c2 = new Container(BoxLayout.x());
@@ -79,11 +90,16 @@ public class AfficheVeterinaire {
         Container c7 = new Container(BoxLayout.x());
         Container c8 = new Container(BoxLayout.x());
 
+        //sonRate.getRate()
         Container cnt1 = new Container(BoxLayout.y());
         EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(250, 250), true);
         ImageViewer i = new ImageViewer();
         i.setImage(URLImage.createToStorage(placeholder, v.getImages(), "http://localhost/paw_z/web/images/pawVets/" + v.getImages()));
-
+        
+        
+        Label lbrate = new Label((String)""+sonRate.getRate());
+        //System.out.println(sonRate.getRate());
+        
         Label a = new Label("      Nom : ");
         Label lbnom = new Label(v.getNom());
 
@@ -171,7 +187,8 @@ public class AfficheVeterinaire {
         //c8.add();
 
         cnt1.add(FlowLayout.encloseCenter(c));
-        cnt1.add(FlowLayout.encloseCenter(createStarRankSlider(v.getId())));
+        cnt1.add(FlowLayout.encloseCenter(createStarRankSlider(v.getId()),lbrate));
+        
         cnt1.add(c1);
         cnt1.add(c2);
         cnt1.add(c3);

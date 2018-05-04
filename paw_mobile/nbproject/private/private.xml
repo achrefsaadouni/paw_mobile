@@ -4,25 +4,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/VeterinaireForm.java</file>
-            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/com/mycompany/myapp/LoginUser.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/service/ServiceUtilisateur.java</file>
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/Entity/RateVet.java</file>
             <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/Entity/Veterinaire.java</file>
             <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/service/ServiceVeterinaire.java</file>
             <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/AfficheVeterinaire.java</file>
-            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/forms/veterinaire/Position.java</file>
-            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/src/service/ServiceUtilisateur.java</file>
-            <file>jar:file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/lib/CodenameOne_SRC.zip!/com/codename1/ui/Slider.java</file>
-=======
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/LivraisonForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/utilisateur/EditProfile.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/service/ServiceAchat.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/utilisateur/ProfileForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Utilisateur.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/boutique/StripeForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/forms/FeedBack/AjoutFeedBackForm.java</file>
-            <file>file:/E:/PIDEV/paw_mobile/paw_mobile/src/Entity/Veterinaire.java</file>
->>>>>>> c7b07cad9d6d88f988899139eda8ab67e9b068e4
+            <file>file:/C:/Users/gmehd/Documents/paw_mobile/paw_mobile/build.xml</file>
         </group>
     </open-files>
 </project-private>
