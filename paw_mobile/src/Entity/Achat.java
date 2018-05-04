@@ -17,8 +17,8 @@ public class Achat {
     private int id_achat;
     private Utilisateur user;
     private List<LigneAchat> list;
-    private Date date_achat;
-    private double prix;
+    private String date_achat;
+    private Float prix;
     private String etat;
 
     public List<LigneAchat> getList() {
@@ -29,13 +29,20 @@ public class Achat {
         this.list = list;
     }
 
+    public Achat(int id_achat, String date_achat, Float prix, String etat) {
+        this.id_achat = id_achat;
+        this.date_achat = date_achat;
+        this.prix = prix;
+        this.etat = etat;
+    }
+
   
 
-    public double getPrix() {
+    public float getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(Float prix) {
         this.prix = prix;
     }
 
@@ -52,11 +59,11 @@ public class Achat {
 
  
 
-    public Date getDate_achat() {
+    public String getDate_achat() {
         return date_achat;
     }
 
-    public void setDate_achat(Date date_achat) {
+    public void setDate_achat(String date_achat) {
         this.date_achat = date_achat;
     }
 
@@ -77,7 +84,7 @@ public class Achat {
         this.user = user;
     }
 
-    public Achat(int id_achat, Utilisateur user, List<LigneAchat> list, Date date_achat, double prix, String etat) {
+    public Achat(int id_achat, Utilisateur user, List<LigneAchat> list, String date_achat, Float prix, String etat) {
         this.id_achat = id_achat;
         this.user = user;
         this.list = list;

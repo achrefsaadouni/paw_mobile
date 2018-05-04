@@ -67,7 +67,7 @@ class LoginUser {
             }
             if (x==1)
             {
-                this.theme = UIManager.initFirstTheme("/theme");
+            this.theme = UIManager.initNamedTheme("/theme_1", "Theme 1");
                MenuForm mf = new MenuForm(theme);
                mf.affiche();
             }

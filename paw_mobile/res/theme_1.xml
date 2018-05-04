@@ -9,7 +9,6 @@
     <image name="account.png"  />
     <image name="account.png1"  />
     <ui name="AchatsForm" />
-    <ui name="AchatsForm1" />
     <ui name="AddForm" />
     <ui name="AddForm1" />
     <image name="addItem.png"  />
@@ -997,8 +996,6 @@
         <font key="BgAchats.font" type="system" face="0" style="1" size="8" />
         <val key="BgAchats.margin" value="0,0,0,0" />
         <val key="BgAchats.padding" value="0,0,0,0" />
-        <val key="BgApp.bgImage" value="bg_form.png" />
-        <val key="BgApp.bgType" value="33" />
         <font key="BgApp.font" type="system" face="0" style="0" size="0" />
         <val key="BgApp.margin" value="0,0,0,0" />
         <val key="BgApp.padding" value="0,0,0,0" />
@@ -1993,7 +1990,7 @@
         <font key="BgAchats.font" type="system" face="0" style="1" size="8" />
         <val key="BgAchats.margin" value="0,0,0,0" />
         <val key="BgAchats.padding" value="0,0,0,0" />
-        <val key="BgApp.bgImage" value="bg_form.png1" />
+        <val key="BgApp.bgImage" value="BgBoutique.png" />
         <val key="BgApp.bgType" value="33" />
         <font key="BgApp.font" type="system" face="0" style="0" size="0" />
         <val key="BgApp.margin" value="0,0,0,0" />

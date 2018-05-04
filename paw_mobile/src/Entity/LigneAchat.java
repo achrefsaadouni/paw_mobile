@@ -71,9 +71,10 @@ public class LigneAchat {
         this.produit = produit;
     }
     
-    public LigneAchat(int nbr_produit,Produit produit, int id_achat) {
+    public LigneAchat(int id_ligne,int nbr_produit,Produit produit) {
         this.nbr_produit = nbr_produit;
-        this.id_achat = id_achat;
+        this.id_ligne = id_ligne;
+        this.produit = produit;
     }
     
     

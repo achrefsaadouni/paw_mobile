@@ -22,6 +22,17 @@ public class Produit {
     private String image2;
     private String type;
 
+    public Produit(int id_produit, String libelle, float prix, int quantite, String description, String image1, String image2, String type) {
+        this.id_produit = id_produit;
+        this.libelle = libelle;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.description = description;
+        this.image1 = image1;
+        this.image2 = image2;
+        this.type = type;
+    }
+
     public int getId_produit() {
         return id_produit;
     }
@@ -91,20 +102,13 @@ public class Produit {
         this.image2 = image2;
     }
 
-    public Produit(int id_produit, String libelle, float prix, int quantite, String description, String image1, String image2, String type) {
-        this.id_produit = id_produit;
-        this.libelle = libelle;
-        this.prix = prix;
-        this.quantite = quantite;
-        this.description = description;
-        this.image1 = image1;
-        this.image2 = image2;
-        this.type = type;
+    public Produit() {
+       
     }
 
     @Override
     public String toString() {
-        return "Produit{" + "id_produit=" + id_produit + ", libelle=" + libelle + ", prix=" + prix + ", quantite=" + quantite + ", description=" + description + ", image1=" + image1 + ", image2=" + image2 + ", type=" + type + '}';
+        return "Produit{ libelle= " + libelle + " prix=" + prix +"image1 "+ image1+'}';
     }
     
 }

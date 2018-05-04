@@ -9,8 +9,6 @@
     </component>
     <component type="Container" name="RightContainer" cloudDestinationProperty="Container" uiid="MyColdGreenTab" focusable="false" layout="BoxLayout" boxLayoutAxis="Y" >
       <component type="Container" name="Container" cloudDestinationProperty="Container" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="3" flowLayoutValign="0" >
-        <component type="Button" name="Delete" cloudDestinationProperty="Delete" uiid="WhiteButton" text="" icon="cancel (4).png" >
-        </component>
       </component>
       <component type="Container" name="DetailContainer" cloudDestinationProperty="DetailContainer" >
         <component type="Container" name="LeftDetailsContainer" cloudDestinationProperty="LeftDetailsContainer" layout="BoxLayout" boxLayoutAxis="Y" >
@@ -25,9 +23,7 @@
         </component>
       </component>
       <component type="Container" name="ButtonContainer" cloudDestinationProperty="ButtonContainer" layout="BoxLayout" boxLayoutAxis="X" >
-        <component type="Button" name="Vendu" cloudDestinationProperty="Vendu" uiid="BlueButton" text="Plus" icon="plus.png" >
-        </component>
-        <component type="Button" name="Booster" cloudDestinationProperty="Booster" uiid="RedButton" text="Moins" icon="cancel (2).png" >
+        <component type="Button" name="Vendu" cloudDestinationProperty="Vendu" uiid="WhiteButton2" scrollVisible="false" text="                                                  " >
         </component>
       </component>
     </component>

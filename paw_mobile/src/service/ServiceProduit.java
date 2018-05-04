@@ -61,5 +61,8 @@ ArrayList<Produit> listProduits = new ArrayList<>();
         NetworkManager.getInstance().addToQueueAndWait(con);
         return listProduits;
     }
+    
+    
+   
 
 }

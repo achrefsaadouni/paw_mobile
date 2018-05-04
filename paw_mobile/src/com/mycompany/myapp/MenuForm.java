@@ -5,15 +5,21 @@
  */
 package com.mycompany.myapp;
 
+import static com.codename1.ui.CN.execute;
+import static com.codename1.ui.CN.isNativeShareSupported;
+import static com.codename1.ui.CN.share;
+import com.codename1.ui.Dialog;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
+import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import forms.FeedBack.AjoutFeedBackForm;
 import forms.boutique.BoutiqueForm;
 import forms.boutique.PanierForm;
 import forms.annonceAmine.Ajout;
+import forms.boutique.MesAchatsForm;
 import forms.utilisateur.ProfileForm;
-import forms.veterinaire.AfficheVeterinaire;
-import forms.veterinaire.VeterinaireForm;
+import util.MenuManager;
 
 /**
  *
@@ -21,55 +27,19 @@ import forms.veterinaire.VeterinaireForm;
  */
 public class MenuForm {
     
-    Form menu;
+    Form f;
     Resources theme;
 
     public MenuForm(Resources theme) {
+        f = new Form ("Acceuil");
         this.theme = theme;
+         
     }
     
     public void affiche()
-    {
-        menu = new Form ("menu");
-        menu.getToolbar().addCommandToOverflowMenu("Panier", null, (e)
-                -> {
-                PanierForm bf = new PanierForm(theme);
-                bf.affichePanier();
-                }
-        );
-        menu.getToolbar().addCommandToOverflowMenu("Boutique", null, (e)
-                -> {
-                BoutiqueForm bf = new BoutiqueForm();
-                bf.afficherBoutique("Vetements");
-                }
-        );
-        menu.getToolbar().addCommandToOverflowMenu("Profile", null, (e)
-                -> {
-                ProfileForm pf = new ProfileForm();
-                pf.affiche();
-                }
-        );
-        menu.getToolbar().addCommandToOverflowMenu("FeedBack", null, (e)
-                -> {
-                AjoutFeedBackForm rf = new AjoutFeedBackForm();
-                rf.afficher();
-                }
-        );
-        menu.getToolbar().addCommandToOverflowMenu("Vétérinaire", null, (e)
-                -> {
-                AfficheVeterinaire vf = new AfficheVeterinaire();
-                
-                }
-        );
-
-         menu.getToolbar().addCommandToOverflowMenu("Amine", null, (e)
-                -> {
-                  Ajout h = new Ajout(theme);
-        h.getF().show();
-                }
-        );
-      
-       menu.show();
+    { 
+       MenuManager.createMenu(f, theme);
+       f.show();
     }
     
 }
