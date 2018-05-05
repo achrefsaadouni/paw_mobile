@@ -11,42 +11,63 @@ import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.URLImage;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.AnnonceForm;
+import com.mycompany.myapp.MenuForm;
+import com.mycompany.myapp.ServiceForm;
+import forms.FeedBack.AjoutFeedBackForm;
+import forms.FeedBack.MesFeedBackForm;
 import forms.boutique.BoutiqueForm;
+import forms.boutique.PanierForm;
+import forms.utilisateur.EditProfile;
+import forms.veterinaire.AfficheVeterinaire;
 
 /**
  *
  * @author Meedoch
  */
 public class MenuManager {
-
+    Resources theme ;
     public static void createMenu(Form f, Resources theme) {
+        
         String uuid = "sideMenuCommandCenter";
         URLImage i;
-        String url = "http://localhost/paw_web/web/images/pawBoutique/" + Utilisateur.membre.getAvatar();
+        String url = "http://localhost/paw_web/web/images/pawUsers/"+Utilisateur.membre.getAvatar();
         EncodedImage enc;
         enc = EncodedImage.createFromImage(theme.getImage("user.png"), false);
         i = URLImage.createToStorage(enc, Utilisateur.membre.getAvatar(), url);
         f.getToolbar().addCommandToSideMenu("", i.scaled(150, 150), (evt) -> {
+            EditProfile ep = new EditProfile();
+            ep.affiche();
+        });
+
+        f.getToolbar().addCommandToSideMenu("Acceuil", theme.getImage("homepage.png").scaled(20, 20), (evt) -> {
+            MenuForm mf = new MenuForm(theme);
+            mf.affiche();
 
         });
-        f.getToolbar().addCommandToSideMenu(Utilisateur.membre.getNom() + " " + Utilisateur.membre.getPrenom(), null, (evt) -> {
-
+        f.getToolbar().addCommandToSideMenu("Annonce", theme.getImage("sitting-dog.png").scaled(20, 20), (evt) -> {
+            AnnonceForm af= new AnnonceForm(theme);
+            af.affiche();
         });
-        f.getToolbar().addCommandToSideMenu("Evenements", theme.getImage("event.png").scaled(20, 20), (evt) -> {
-
+        f.getToolbar().addCommandToSideMenu("Veterinaires", theme.getImage("syringe.png").scaled(20, 20), (evt) -> {
+            AfficheVeterinaire av = new AfficheVeterinaire(theme);
+            av.getF().show();
         });
-        f.getToolbar().addCommandToSideMenu("Publications", theme.getImage("publication.png").scaled(20, 20), (evt) -> {
-
-        });
-        f.getToolbar().addCommandToSideMenu("Boutique", theme.getImage("boutique.png").scaled(20, 20), (evt) -> {
+        f.getToolbar().addCommandToSideMenu("Boutique", theme.getImage("shop.png").scaled(20, 20), (evt) -> {
             BoutiqueForm bf = new BoutiqueForm();
             bf.afficherBoutique("Laisse, Collier et Harnais");
         });
-        f.getToolbar().addCommandToSideMenu("Messages", theme.getImage("messages.png").scaled(20, 20), (evt) -> {
-
+        f.getToolbar().addCommandToSideMenu("Panier", theme.getImage("boutique.png").scaled(20, 20), (evt) -> {
+            PanierForm bf = new PanierForm(theme);
+            bf.affichePanier();
         });
-        f.getToolbar().addCommandToSideMenu("Profile", theme.getImage("profile.png").scaled(20, 20), (evt) -> {
-
+        f.getToolbar().addCommandToSideMenu("Services", theme.getImage("dog-training.png").scaled(20, 20), (evt) -> {
+            ServiceForm sf = new ServiceForm((theme));
+            sf.affiche();
+        });
+        f.getToolbar().addCommandToSideMenu("FeedBack", theme.getImage("note.png").scaled(20, 20), (evt) -> {
+            AjoutFeedBackForm ajfb= new AjoutFeedBackForm();
+            ajfb.afficher();
         });
     }
 

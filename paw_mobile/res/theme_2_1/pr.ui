@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="pr" cloudDestinationProperty="pr" uiid="Logins" title="Profile" >
+  <component type="Container" name="cAvatar" cloudDestinationProperty="Container" rtl="false" scrollVisible="true" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="1" flowLayoutValign="0" >
+  </component>
+  <component type="Container" name="container" cloudDestinationProperty="Container1" layout="BoxLayout" boxLayoutAxis="Y" >
+  </component>
+</component>

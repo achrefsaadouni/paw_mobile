@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="EditProfil" cloudDestinationProperty="HH" uiid="Logins" layout="BoxLayout" boxLayoutAxis="Y" title="Mise &#xe0; jour des donn&#xe9;es" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="TableLayout" tableLayoutRows="9" tableLayoutColumns="2" >
+    <component type="Label" name="Label" cloudDestinationProperty="Label" text="Nom" >
+    </component>
+    <component type="TextField" name="nom" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" hint="Nom" >
+    </component>
+    <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="Pr&#xe9;nom" >
+    </component>
+    <component type="TextField" name="prenom" cloudBoundProperty="text" cloudDestinationProperty="TextField1" text="" hint="Prenom" >
+    </component>
+    <component type="Label" name="Label2" cloudDestinationProperty="Label2" text="Email" >
+    </component>
+    <component type="TextField" name="email" cloudBoundProperty="text" cloudDestinationProperty="email" text="" hint="Email" >
+    </component>
+    <component type="Label" name="Label3" cloudDestinationProperty="Label3" text="Username" >
+    </component>
+    <component type="TextField" name="username" cloudBoundProperty="text" cloudDestinationProperty="username" text="" hint="Username" >
+    </component>
+    <component type="Label" name="Label4" cloudDestinationProperty="Label4" text="Mot de passe" >
+    </component>
+    <component type="TextField" name="mdp" cloudBoundProperty="text" cloudDestinationProperty="TextField3" text="" constraint="65536" hint="Mot de pass" >
+    </component>
+    <component type="Label" name="Label5" cloudDestinationProperty="Label5" text="Adresse" >
+    </component>
+    <component type="TextField" name="addresse" cloudBoundProperty="text" cloudDestinationProperty="TextField1" text="" hint="Adresse" >
+    </component>
+    <component type="Label" name="Label6" cloudDestinationProperty="Label6" text="Num&#xe9;ro" >
+    </component>
+    <component type="TextField" name="numero" cloudBoundProperty="text" cloudDestinationProperty="TextField2" text="" constraint="3" hint="Num&#xe9;ro" >
+    </component>
+    <component type="Label" name="Label7" cloudDestinationProperty="Label7" text="Avatar" >
+    </component>
+    <component type="Button" name="avatar" cloudDestinationProperty="avatar" text="Changez votre avatar" >
+    </component>
+    <component type="Label" name="Label8" cloudDestinationProperty="Label8" text="Sexe" >
+    </component>
+    <component type="ComboBox" name="sexe" cloudDestinationProperty="sexe" >
+      <stringItem value="Homme" />
+      <stringItem value="Femme" />
+    </component>
+  </component>
+  <component type="Container" name="Container2" cloudDestinationProperty="Container2" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+    <component type="Button" name="edit" cloudDestinationProperty="sinscrire" text="Enregistrer" icon="ic_input_black_18dp.png" >
+    </component>
+  </component>
+</component>

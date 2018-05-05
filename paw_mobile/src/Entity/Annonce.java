@@ -27,6 +27,51 @@ public class Annonce
   // private Date date;
    private String images;
    private int id_utilisateur;
+   private String nomUtilisater ;
+   private String EmailUtilisateur  ; 
+   private String PrenomUtilisateur ; 
+   private String NumeroUtilisateur  ; 
+   private String adresseUtilisateur ; 
+
+    public String getAdresseUtilisateur() {
+        return adresseUtilisateur;
+    }
+
+    public void setAdresseUtilisateur(String adresseUtilisateur) {
+        this.adresseUtilisateur = adresseUtilisateur;
+    }
+
+    public String getEmailUtilisateur() {
+        return EmailUtilisateur;
+    }
+
+    public void setEmailUtilisateur(String EmailUtilisateur) {
+        this.EmailUtilisateur = EmailUtilisateur;
+    }
+
+    public String getPrenomUtilisateur() {
+        return PrenomUtilisateur;
+    }
+
+    public void setPrenomUtilisateur(String PrenomUtilisateur) {
+        this.PrenomUtilisateur = PrenomUtilisateur;
+    }
+
+    public String getNumeroUtilisateur() {
+        return NumeroUtilisateur;
+    }
+
+    public void setNumeroUtilisateur(String NumeroUtilisateur) {
+        this.NumeroUtilisateur = NumeroUtilisateur;
+    }
+
+    public String getNomUtilisater() {
+        return nomUtilisater;
+    }
+
+ public void setNomUtilisater(String nomUtilisater) {
+        this.nomUtilisater = nomUtilisater;
+    }
 
   /*  public Date getDate() {
         return date;
@@ -36,9 +81,10 @@ public class Annonce
         this.date = date;
     }
 */
+ 
     public Annonce() {
     }
-     public Annonce(int id , int age, String couleur, String sex, String race, String message_complementaire, String type,String images) {
+     public Annonce(int id , int age, String couleur, String sex, String race, String message_complementaire, String type,String images,int id_utilisateur) {
         this.id=id ; 
         this.age = age;
         this.couleur = couleur;
@@ -48,8 +94,9 @@ public class Annonce
         this.type = type;
   //      this.date=date;
         this.images=images ; 
+        this.id_utilisateur = id_utilisateur;
     }
-    public Annonce(int id , int age, String couleur, String sex, String race, String message_complementaire, String type) {
+    public Annonce(int id , int age, String couleur, String sex, String race, String message_complementaire,  String type) {
         this.id=id ; 
         this.age = age;
         this.couleur = couleur;
@@ -86,6 +133,17 @@ public class Annonce
         this.id_utilisateur=id_utilisateur;
    //     this.date=date;
     }                        
+
+    public Annonce(int id, int age, String couleur, String sex, String race, String message_complementaire, String type, String images) {
+        this.id = id;
+        this.age = age;
+        this.couleur = couleur;
+        this.sex = sex;
+        this.race = race;
+        this.message_complementaire = message_complementaire;
+        this.type = type;
+        this.images = images;
+    }
                         
    
 

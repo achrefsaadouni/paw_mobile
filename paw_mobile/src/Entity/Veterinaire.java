@@ -21,7 +21,7 @@ public class Veterinaire {
     private String email;
     private double longitude;
     private double latitude;
-    private File images;
+    private String images;
 
     public Veterinaire(int id, String nom, String prenom, String adresse, String region, int numero, String email) {
         this.id = id;
@@ -45,7 +45,7 @@ public class Veterinaire {
         this.latitude = latitude;
     }
 
-    public Veterinaire(int id, String nom, String prenom, String adresse, String region, int numero, String email, double longitude, double latitude, File images) {
+    public Veterinaire(int id, String nom, String prenom, String adresse, String region, int numero, String email, double longitude, double latitude, String images) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -138,11 +138,11 @@ public class Veterinaire {
         this.latitude = latitude;
     }
 
-    public File getImages() {
+    public String getImages() {
         return images;
     }
 
-    public void setImages(File images) {
+    public void setImages(String images) {
         this.images = images;
     }
 }

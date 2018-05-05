@@ -11,8 +11,11 @@
     <image name="codenameone-icon-foreground.png"  />
     <image name="contacts.png" type="multi"  />
     <image name="dog.jpg" type="multi"  />
+    <image name="fa.png"  />
     <image name="input.png" type="multi"  />
+    <image name="inst.jpg"  />
     <image name="layout.png" type="multi"  />
+    <image name="logo_menu.png"  />
     <image name="nativeTheme.jpg"  />
     <image name="RedCard.borderBottom_1.png" type="multi"  />
     <image name="RedCard.borderBottomL_1.png" type="multi"  />
@@ -23,6 +26,8 @@
     <image name="RedCard.borderTop_1.png" type="multi"  />
     <image name="RedCard.borderTopL_1.png" type="multi"  />
     <image name="RedCard.borderTopR_1.png" type="multi"  />
+    <image name="shop.png"  />
+    <image name="site.png"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
         <val key="@menuImageSize" value="4" />

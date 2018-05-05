@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="ppp" cloudDestinationProperty="profile" layout="BoxLayout" boxLayoutAxis="Y" title="Profile" >
+  <component type="Container" name="Container" cloudDestinationProperty="Container" >
+  </component>
+  <component type="ImageViewer" name="avatar" cloudDestinationProperty="ImageViewer" >
+    <custom name="eagerLock" type="java.lang.Boolean" value="true" />
+    <custom name="image" type="com.codename1.ui.Image" value="camping2.png" />
+  </component>
+  <component type="Label" name="name" cloudDestinationProperty="Label" text="hello name" verticalAlignment="4" textPosition="3" >
+  </component>
+  <component type="Label" name="mail" cloudDestinationProperty="Label1" text="Hello mail" verticalAlignment="4" >
+  </component>
+</component>

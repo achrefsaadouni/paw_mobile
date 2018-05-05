@@ -26,6 +26,7 @@ import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import java.util.List;
 import service.ServiceProduit;
+import util.MenuManager;
 
 /**
  *
@@ -49,6 +50,7 @@ public class BoutiqueForm {
         this.theme = UIManager.initNamedTheme("/theme_1", "Theme 1");
         boutiqueForm.removeAll();
         initboutique(type);
+        MenuManager.createMenu(boutiqueForm, theme);
         boutiqueForm.show();
     }
 
@@ -163,12 +165,7 @@ public class BoutiqueForm {
                 afficherBoutique("Jouets");
         }
         );
-         boutiqueForm.getToolbar().addCommandToOverflowMenu("Panier", null, (e)
-                -> {
-                PanierForm bf = new PanierForm(theme);
-        bf.affichePanier();
-        }
-        );
+  
 
     }
 

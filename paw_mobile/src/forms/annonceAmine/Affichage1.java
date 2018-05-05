@@ -6,22 +6,19 @@
 package forms.annonceAmine;
 
 import Entity.AnnonceTrouvee;
-import forms.annonceAmine.Ajout;
 import com.codename1.components.ImageViewer;
-import com.codename1.components.SpanLabel;
+import com.codename1.messaging.Message;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
+import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
-import com.codename1.ui.List;
 import com.codename1.ui.URLImage;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.util.Resources;
-import java.io.IOException;
+import forms.annonceAmine.Ajout;
 import java.util.ArrayList;
 import service.ServiceAnnonceTrouvee;
 
@@ -34,7 +31,7 @@ public class Affichage1 {
     Resources theme;    
    public Affichage1(Resources theme) {
         this.theme=theme;
-        f = new Form("Toutes les  annonces Trouveés", new BoxLayout(BoxLayout.Y_AXIS));
+        f = new Form("Annonces Trouveés", new BoxLayout(BoxLayout.Y_AXIS));
      
             ImageViewer imageAnnonceTr=new ImageViewer();
             ServiceAnnonceTrouvee ServiceAnnonceTrouvee = new ServiceAnnonceTrouvee();
@@ -82,11 +79,12 @@ public class Affichage1 {
                  Label colier = new Label(at.getColier()); 
                  Label age = new Label(String.valueOf(at.getAge())); 
                  Label sexe = new Label (at.getSex()) ;  
+               
                  Button Details = new Button("Details de cette Annonce");
                  
                  Details.addActionListener(l->{
                  
-                      Form f2 = new Form("CI joint tous les detais de l'annonce", new BoxLayout(BoxLayout.Y_AXIS));
+                      Form f2 = new Form("Les details de l'annonce", new BoxLayout(BoxLayout.Y_AXIS));
                       ImageViewer imageAnnonceTr=new ImageViewer();
                       ServiceAnnonceTrouvee ServiceAnnonceTrouvee = new ServiceAnnonceTrouvee();
             /*  SpanLabel lb = new SpanLabel();
@@ -97,6 +95,9 @@ public class Affichage1 {
                 f2.add(lb);
             */
                         f2.add(ajouter1(at));
+                          f2.getToolbar().addCommandToRightBar("back", null, (ev)->{Affichage1 h=new Affichage1(theme);
+                           h.getF().show();
+                            });
     
                              f2.show();
                  
@@ -114,6 +115,7 @@ public class Affichage1 {
                  c.add(c2) ; 
                  c.add(c3) ; 
                  c.add(c4) ; 
+               
                  c.add(Details) ; 
                  
             
@@ -129,8 +131,13 @@ public class Affichage1 {
                     Container c3 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
                     Container c4 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
                     Container c5 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
-                  
-                      EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(150, 150), true);
+                    Container c6 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
+                    Container c7 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
+                    Container c8 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
+                    Container c9 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
+                    Container c10 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ; 
+                 
+                    EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(150, 150), true);
                      ImageViewer image=new ImageViewer();
           
                      image.setImage(URLImage.createToStorage(placeholder,at.getImages(), "http://localhost/paw_web/web/images/pawLostFound/"+at.getImages()));
@@ -140,14 +147,28 @@ public class Affichage1 {
                     Label z = new Label("Agé de : ");
                     Label e = new Label ("Son Sexe  :") ; 
                     Label h = new Label ("Message complementaire  :") ; 
-                
+                    Label m = new Label ("Nom du prorietaire:") ; 
+                    Label o = new Label ("Prenom du prorietaire :") ; 
+                    Label p = new Label ("Addresse du prorietaire : ") ; 
+                    Label l = new Label ("Numero du prorieatire : ") ; 
+                    Label n = new Label ("Email  : ") ; 
                  Label type = new Label(at.getType()) ;
                  Label colier = new Label(at.getColier()); 
                  Label age = new Label(String.valueOf(at.getAge())); 
                  Label sexe = new Label (at.getSex()) ;  
-                 Label msg = new Label (at.getMessage_complementaire()) ;  
-               
-                
+                 Label msg = new Label (at.getMessage_complementaire()) ; 
+                 Label nom = new Label (at.getNomUtilisater()) ; 
+                 Label prenom = new Label (at.getPrenomUtilisateur()) ; 
+                 Label adresse = new Label (at.getAdresseUtilisateur()) ; 
+                 Label numero = new Label (at.getNumeroUtilisateur()) ; 
+                 Label email = new Label (at.getEmailUtilisateur()) ; 
+                 Button contacter = new Button ("Contacter par email") ;  
+                   contacter.addActionListener(ww->{
+                   Message msg1 = new Message("Bonjour j'ai trouver votre animal " );
+            
+                 Display.getInstance().sendMessage(new String[]{at.getEmailUtilisateur()}, "PI", msg1);
+                   
+                   });
                  c1.add(x) ; 
                  c1.add(type) ;
                  c2.add(y) ;
@@ -158,15 +179,28 @@ public class Affichage1 {
                  c4.add(sexe) ; 
                  c5.add(h) ; 
                  c5.add(msg) ;
-                 
+                 c6.add(m) ;
+                 c6.add(nom) ; 
+                 c7.add(o) ; 
+                 c7.add(prenom) ;
+                 c8.add(p) ; 
+                 c8.add(adresse) ;
+                 c9.add(l) ; 
+                 c9.add(numero) ; 
+                 c10.add(n) ;
+                 c10.add(email) ; 
                  c.add(image);
                  c.add(c1);
                  c.add(c2) ; 
                  c.add(c3) ; 
                  c.add(c4) ;
-                 c.add(c5) ; 
-                 
-            
+                 c.add(c5) ;
+                 c.add(c6) ; 
+                 c.add(c7) ; 
+                 c.add(c8) ;
+                 c.add(c9) ; 
+                 c.add(c10) ; 
+                 c.add(contacter) ; 
                  return c;
             }
             

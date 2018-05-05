@@ -23,6 +23,7 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
+import util.MenuManager;
 
 /**
  *
@@ -174,6 +175,7 @@ public class PanierForm {
 
     public void affichePanier() {
         initPanier();
+        MenuManager.createMenu(monPanier, theme);
         monPanier.show();
     }
 

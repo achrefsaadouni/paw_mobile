@@ -13,6 +13,7 @@ import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.util.StringUtil;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,15 +27,11 @@ public class ServiceAnnonceTrouvee {
     
       public void ajoutAnnonceTrouvee(AnnonceTrouvee at) {
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost/paw_web/web/app_dev.php/AddAnnonceTrouver/new?"+ "&colier=" + at.getColier() + "&couleur=" + at.getCouleur()+ "&lieu=" + at.getLieu_trouve()+ "&message=" + at.getMessage_complementaire()+ "&race=" + at.getRace()+ "&sexe=" + at.getSex()+ "&age=" + at.getAge()+ "&type=" + at.getType()+"&image=" + at.getImages();
+        String Url = "http://localhost/paw_web/web/app_dev.php/AddAnnonceTrouver/new?"+ "&colier=" + at.getColier() + "&couleur=" + at.getCouleur()+ "&lieu=" + at.getLieu_trouve()+ "&message=" + at.getMessage_complementaire()+ "&race=" + at.getRace()+ "&sexe=" + at.getSex()+ "&age=" + at.getAge()+ "&type=" + at.getType()+"&image=" + at.getImages()+"&user="+at.getId_utilisateur();
         con.setUrl(Url);
 
-            con.addResponseListener((e) -> {
-            String str = new String(con.getResponseData());
-            System.out.println(str);
 
-        });
-        NetworkManager.getInstance().addToQueueAndWait(con);
+        NetworkManager.getInstance().addToQueue(con);
     }
       
       
@@ -60,6 +57,15 @@ public class ServiceAnnonceTrouvee {
                 float age = Float.parseFloat(obj.get("age").toString());
                 
                 System.out.println(id);
+                System.out.println(obj.get("utilisateur"));
+                String partsUsr=obj.get("utilisateur").toString();
+                List<String> userPart=StringUtil.tokenize(partsUsr, ",");
+                System.err.println(userPart.get(0).substring(5));
+                e.setNomUtilisater(userPart.get(0).substring(5));
+                e.setPrenomUtilisateur(userPart.get(1).substring(8));
+                e.setAdresseUtilisateur(userPart.get(2).substring(10));
+                e.setNumeroUtilisateur(userPart.get(3).substring(8));
+                e.setEmailUtilisateur(userPart.get(21).substring(7));
                 e.setId((int)id);
                 e.setAge((int) age);
                 e.setColier(obj.get("colier").toString());
@@ -118,9 +124,22 @@ public class ServiceAnnonceTrouvee {
         return list;
     }
     
-    public void modifier(String id  ,String lieuTrouve) {
+   public void modifier(int id  , String lieuxT , String sexe,String race , String couleur ,String msg, String colier) {
         ConnectionRequest con = new ConnectionRequest();
-            String Url = ("http://localhost/EspaceSanteWeb/web/app_dev.php/modifierOffreMobile?id="+id+"&lieuTrouve="+lieuTrouve);
+            String Url = ("http://localhost/paw_web/web/app_dev.php/modifierAnnonceTrouver3?id="+id+"&lieu="+lieuxT+"&sexe="+sexe+"&race="+race+"&couleur="+couleur+"&message="+msg+"&colier"+colier);
+            con.setUrl(Url);
+            con.addResponseListener((e) -> {
+            String str = new String(con.getResponseData());
+            System.out.println(str);
+
+        });
+        NetworkManager.getInstance().addToQueueAndWait(con);
+    }
+   
+
+public void supprimer1(int id ) {
+        ConnectionRequest con = new ConnectionRequest();
+            String Url = ("http://localhost/paw_web/web/app_dev.php/supprimerAnnonceTrouver_1?id="+id);
             con.setUrl(Url);
             con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());

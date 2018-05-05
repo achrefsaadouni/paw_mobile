@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="ajoutFeedBack" cloudDestinationProperty="AddForm" uiid="BgApp" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="0" title="" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="ComboBox" name="objet" cloudDestinationProperty="objet" hint="Le service concern&#xe9; .." >
+      <stringItem value="Service concern&#xe9; .." />
+      <stringItem value="Boutique" />
+      <stringItem value="Lost&amp;Found" />
+      <stringItem value="Utilisateur" />
+      <stringItem value="Adoption" />
+      <stringItem value="Accouplement" />
+      <stringItem value="Sitting" />
+      <stringItem value="Training" />
+    </component>
+    <component type="TextArea" name="text" cloudBoundProperty="text" cloudDestinationProperty="TextArea" uiid="MyTextArea" text="" hint="Une petite description .." hintIcon="info.png" >
+    </component>
+    <component type="Container" name="Container" cloudDestinationProperty="Container" layout="GridLayout" gridLayoutRows="1" gridLayoutColumns="2" >
+      <component type="RadioButton" name="reclamation" cloudDestinationProperty="Nouveau" uiid="TransparentButtonWhite" text="Reclamation" group="r" >
+      </component>
+      <component type="RadioButton" name="remerciment" cloudDestinationProperty="EtatMoyen" uiid="TransparentButtonWhite" text="Remerciment" group="r" >
+      </component>
+    </component>
+    <component type="Button" name="envoyer" cloudDestinationProperty="Button" uiid="BlueButton" text="Envoyer" icon="plus.png" gap="10" >
+    </component>
+  </component>
+</component>

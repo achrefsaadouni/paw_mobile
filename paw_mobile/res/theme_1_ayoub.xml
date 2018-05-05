@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="7" useXmlUI="false">
+    <image name="11.png"  />
+    <image name="aa.png"  />
+    <image name="aa.png1"  />
+    <image name="account (1).png"  />
+    <image name="account (1).png1"  />
+    <image name="account.png"  />
+    <image name="account.png1"  />
+    <ui name="AchatsForm" />
+    <ui name="AchatsForm1" />
+    <ui name="AddForm1" />
+    <image name="addItem.png"  />
+    <image name="addItem.png1"  />
+    <ui name="ajoutFeedBack" />
+    <image name="android-icon.png" type="multi"  />
+    <image name="android-icon.png1" type="multi"  />
+    <image name="annual.png"  />
+    <image name="annual.png1"  />
+    <image name="apple-icon.png" type="multi"  />
+    <image name="apple-icon.png1" type="multi"  />
+    <image name="approve.png"  />
+    <image name="approve.png1"  />
+    <image name="arrow-down.png"  />
+    <image name="arrow-down.png1"  />
+    <image name="arrow.png"  />
+    <image name="arrow.png1"  />
+    <ui name="articleDetail" />
+    <ui name="articleDetail1" />
+    <image name="back-command.png" type="multi"  />
+    <image name="back-command.png1" type="multi"  />
+    <image name="back-command.png11" type="multi"  />
+    <image name="back-command.png2" type="multi"  />
+    <image name="back-command.png21" type="multi"  />
+    <image name="back-command.png3" type="multi"  />
+    <image name="back-command.png4" type="multi"  />
+    <image name="back-command.png5" type="multi"  />
+    <image name="back-icon.png"  />
+    <image name="back-icon.png1"  />
+    <image name="back_center.png"  />
+    <image name="back_center.png1"  />
+    <image name="back_left.png"  />
+    <image name="back_left.png1"  />
+    <image name="back_mon_article.png"  />
+    <image name="back_mon_article.png1"  />
+    <image name="back_purple_tab.png"  />
+    <image name="back_purple_tab.png1"  />
+    <image name="back_right.png"  />
+    <image name="back_right.png1"  />
+    <image name="back_text_area.png"  />
+    <image name="back_text_area.png1"  />
+    <image name="back_transprent.png"  />
+    <image name="back_transprent.png1"  />
+    <image name="background2.png"  />
+    <image name="background2.png1"  />
+    <image name="bag.png"  />
+    <image name="bag.png1"  />
+    <image name="banknote.png"  />
+    <image name="banknote.png1"  />
+    <image name="bck_center.png"  />
+    <image name="bck_center.png1"  />
+    <image name="bck_trsp.png"  />
+    <image name="bck_trsp.png1"  />
+    <image name="bg.png"  />
+    <image name="bg.png1"  />
+    <image name="bg.png2"  />
+    <image name="bg.png3"  />
+    <image name="bg_form.png"  />
+    <image name="bg_form.png1"  />
+    <image name="bg_menu.png"  />
+    <image name="bg_menu.png1"  />
+    <image name="bgAchat.png"  />
+    <image name="bgAchat.png1"  />
+    <image name="BgBoutique.png"  />
+    <image name="BgBoutique.png1"  />
+    <image name="binary-code.png"  />
+    <image name="binary-code.png1"  />
+    <image name="blue_bck.png"  />
+    <image name="blue_bck.png1"  />
+    <image name="blue_darken_back.png"  />
+    <image name="blue_darken_back.png1"  />
+    <image name="border.png"  />
+    <image name="border.png1"  />
+    <image name="border.png11"  />
+    <image name="border.png2"  />
+    <image name="border.png21"  />
+    <image name="border.png3"  />
+    <image name="border.png4"  />
+    <image name="border.png5"  />
+    <ui name="Boutique" />
+    <image name="boutique.png"  />
+    <image name="boutique.png1"  />
+    <image name="boutique.png2"  />
+    <image name="boutique.png3"  />
+    <ui name="Boutique1" />
+    <image name="boutiqueItems.png"  />
+    <image name="boutiqueItems.png1"  />
+    <image name="BoutiquePurpleTab.borderBottom_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderBottom_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderBottomL_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderBottomL_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderBottomR_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderBottomR_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderCenter_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderCenter_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderLeft_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderLeft_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderRight_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderRight_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTop_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTop_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTopL_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTopL_1.png1" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTopR_1.png" type="multi"  />
+    <image name="BoutiquePurpleTab.borderTopR_1.png1" type="multi"  />
+    <image name="btn_transparent_upload.png"  />
+    <image name="btn_transparent_upload.png1"  />
+    <image name="Button.dis#borderBottom_1.png" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png1" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png11" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png2" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png21" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png3" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png4" type="multi"  />
+    <image name="Button.dis#borderBottom_1.png5" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png1" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png11" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png2" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png21" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png3" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png4" type="multi"  />
+    <image name="Button.dis#borderBottomL_1.png5" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png1" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png11" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png2" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png21" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png3" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png4" type="multi"  />
+    <image name="Button.dis#borderBottomR_1.png5" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png1" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png11" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png2" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png21" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png3" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png4" type="multi"  />
+    <image name="Button.dis#borderCenter_1.png5" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png1" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png11" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png2" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png21" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png3" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png4" type="multi"  />
+    <image name="Button.dis#borderLeft_1.png5" type="multi"  />
+    <image name="Button.dis#borderRight_1.png" type="multi"  />
+    <image name="Button.dis#borderRight_1.png1" type="multi"  />
+    <image name="Button.dis#borderRight_1.png11" type="multi"  />
+    <image name="Button.dis#borderRight_1.png2" type="multi"  />
+    <image name="Button.dis#borderRight_1.png21" type="multi"  />
+    <image name="Button.dis#borderRight_1.png3" type="multi"  />
+    <image name="Button.dis#borderRight_1.png4" type="multi"  />
+    <image name="Button.dis#borderRight_1.png5" type="multi"  />
+    <image name="Button.dis#borderTop_1.png" type="multi"  />
+    <image name="Button.dis#borderTop_1.png1" type="multi"  />
+    <image name="Button.dis#borderTop_1.png11" type="multi"  />
+    <image name="Button.dis#borderTop_1.png2" type="multi"  />
+    <image name="Button.dis#borderTop_1.png21" type="multi"  />
+    <image name="Button.dis#borderTop_1.png3" type="multi"  />
+    <image name="Button.dis#borderTop_1.png4" type="multi"  />
+    <image name="Button.dis#borderTop_1.png5" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png1" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png11" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png2" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png21" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png3" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png4" type="multi"  />
+    <image name="Button.dis#borderTopL_1.png5" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png1" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png11" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png2" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png21" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png3" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png4" type="multi"  />
+    <image name="Button.dis#borderTopR_1.png5" type="multi"  />
+    <image name="buy.png"  />
+    <image name="buy.png1"  />
+    <image name="buy_btn.png"  />
+    <image name="buy_btn.png1"  />
+    <image name="cadre.png"  />
+    <image name="cadre.png1"  />
+    <image name="cal_left_arrow.png" type="multi"  />
+    <image name="cal_left_arrow.png1" type="multi"  />
+    <image name="cal_left_arrow.png11" type="multi"  />
+    <image name="cal_left_arrow.png2" type="multi"  />
+    <image name="cal_left_arrow.png21" type="multi"  />
+    <image name="cal_left_arrow.png3" type="multi"  />
+    <image name="cal_left_arrow.png4" type="multi"  />
+    <image name="cal_left_arrow.png5" type="multi"  />
+    <image name="cal_right_arrow.png" type="multi"  />
+    <image name="cal_right_arrow.png1" type="multi"  />
+    <image name="cal_right_arrow.png11" type="multi"  />
+    <image name="cal_right_arrow.png2" type="multi"  />
+    <image name="cal_right_arrow.png21" type="multi"  />
+    <image name="cal_right_arrow.png3" type="multi"  />
+    <image name="cal_right_arrow.png4" type="multi"  />
+    <image name="cal_right_arrow.png5" type="multi"  />
+    <image name="calendar (1).png"  />
+    <image name="calendar (1).png1"  />
+    <image name="calendar (2).png"  />
+    <image name="calendar (2).png1"  />
+    <image name="calendar-clock.png"  />
+    <image name="calendar.png"  />
+    <image name="calendar.png1"  />
+    <image name="camp.png"  />
+    <image name="camp2.png"  />
+    <image name="camping2.png"  />
+    <image name="cancel (2).png"  />
+    <image name="cancel (2).png1"  />
+    <image name="cancel (3).png"  />
+    <image name="cancel (3).png1"  />
+    <image name="cancel (4).png"  />
+    <image name="cancel (4).png1"  />
+    <image name="cart (3).png"  />
+    <image name="cart (3).png1"  />
+    <image name="change.png"  />
+    <image name="change.png1"  />
+    <image name="chat-bubble-left.png"  />
+    <image name="chat-bubble-right.png"  />
+    <image name="chbox1.png" type="multi"  />
+    <image name="chbox1.png1" type="multi"  />
+    <image name="chbox1.png11" type="multi"  />
+    <image name="chbox1.png2" type="multi"  />
+    <image name="chbox1.png21" type="multi"  />
+    <image name="chbox1.png3" type="multi"  />
+    <image name="chbox1.png4" type="multi"  />
+    <image name="chbox1.png5" type="multi"  />
+    <image name="chboxv1.png" type="multi"  />
+    <image name="chboxv1.png1" type="multi"  />
+    <image name="chboxv1.png11" type="multi"  />
+    <image name="chboxv1.png2" type="multi"  />
+    <image name="chboxv1.png21" type="multi"  />
+    <image name="chboxv1.png3" type="multi"  />
+    <image name="chboxv1.png4" type="multi"  />
+    <image name="chboxv1.png5" type="multi"  />
+    <image name="checked.png"  />
+    <image name="checked.png1"  />
+    <image name="coins (1).png"  />
+    <image name="coins (1).png1"  />
+    <image name="coins.png"  />
+    <image name="coins.png1"  />
+    <image name="combo-arrow.png"  />
+    <image name="combo-arrow.png1"  />
+    <image name="ComboBox.borderBottom_1.png" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png1" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png11" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png2" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png21" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png3" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png4" type="multi"  />
+    <image name="ComboBox.borderBottom_1.png5" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png1" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png11" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png2" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png21" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png3" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png4" type="multi"  />
+    <image name="ComboBox.borderBottomL_1.png5" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png1" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png11" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png2" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png21" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png3" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png4" type="multi"  />
+    <image name="ComboBox.borderBottomR_1.png5" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png1" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png11" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png2" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png21" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png3" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png4" type="multi"  />
+    <image name="ComboBox.borderCenter_1.png5" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png1" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png11" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png2" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png21" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png3" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png4" type="multi"  />
+    <image name="ComboBox.borderLeft_1.png5" type="multi"  />
+    <image name="ComboBox.borderRight_1.png" type="multi"  />
+    <image name="ComboBox.borderRight_1.png1" type="multi"  />
+    <image name="ComboBox.borderRight_1.png11" type="multi"  />
+    <image name="ComboBox.borderRight_1.png2" type="multi"  />
+    <image name="ComboBox.borderRight_1.png21" type="multi"  />
+    <image name="ComboBox.borderRight_1.png3" type="multi"  />
+    <image name="ComboBox.borderRight_1.png4" type="multi"  />
+    <image name="ComboBox.borderRight_1.png5" type="multi"  />
+    <image name="ComboBox.borderTop_1.png" type="multi"  />
+    <image name="ComboBox.borderTop_1.png1" type="multi"  />
+    <image name="ComboBox.borderTop_1.png11" type="multi"  />
+    <image name="ComboBox.borderTop_1.png2" type="multi"  />
+    <image name="ComboBox.borderTop_1.png21" type="multi"  />
+    <image name="ComboBox.borderTop_1.png3" type="multi"  />
+    <image name="ComboBox.borderTop_1.png4" type="multi"  />
+    <image name="ComboBox.borderTop_1.png5" type="multi"  />
+    <image name="ComboBox.borderTopL_1.png" type="multi"  />
+    <image name="ComboBox.borderTopL_1.png1" type="mul

@@ -6,19 +6,25 @@
 package forms.utilisateur;
 
 import Entity.Utilisateur;
+import static Entity.Utilisateur.membre;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Dialog;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.TextField;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import java.util.ArrayList;
+import rest.file.uploader.tn.FileUploader;
 import service.ServiceUtilisateur;
+import util.MenuManager;
 
 /**
  *
@@ -27,6 +33,7 @@ import service.ServiceUtilisateur;
 public class ProfileForm {
     Form currentform;
     Resources theme;
+    String fileNameInServer="";
 
     public ProfileForm() {
         currentform = new Form("rien", new BoxLayout(BoxLayout.Y_AXIS));
@@ -53,8 +60,36 @@ public class ProfileForm {
         addresse.setText(Utilisateur.membre.getAddresse());
         TextField numero = (TextField) ui.findByName("numero", currentform.getContentPane());
         numero.setText(""+Utilisateur.membre.getNumero());
-        TextField avatar = (TextField) ui.findByName("avatar", currentform.getContentPane());
-        avatar.setText(Utilisateur.membre.getAvatar());
+        Button avatar = (Button) ui.findByName("avatar", currentform.getContentPane());
+        avatar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                try{
+                    FileUploader fu = new FileUploader("http://localhost/paw_web/web/images/pawUsers");
+                    
+                    Display.getInstance().openGallery(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent v) {
+                            if(v == null || v.getSource() == null) {
+                                System.out.println("choisir image fail !");
+                                return;
+                            }
+                            String filePath = ((String)v.getSource()).substring(7);
+                            System.out.println(filePath);
+                            try {
+                                fileNameInServer = fu.upload(filePath);
+                            } 
+                            catch (Exception ex) {
+                                ex.printStackTrace();
+                            } 
+                        }
+                    }, Display.GALLERY_IMAGE);  
+                }
+                catch(Exception ex){
+                    ex.printStackTrace();
+                }
+            }
+        });
         TextField pswd = (TextField) ui.findByName("mdp", currentform.getContentPane());
         pswd.setText(Utilisateur.membre.getPassword());
         ComboBox<String> sexe = (ComboBox<String>) ui.findByName("sexe", currentform.getContentPane());
@@ -78,8 +113,13 @@ public class ProfileForm {
                                    null))
                    {}
             }
-            else if (email.getText().equals("")||nom.getText().equals("")||prenom.getText().equals("")||
-                     username.getText().equals("")||pswd.getText().equals("")||addresse.getText().equals(""))
+            else if (email.getText().equals("")
+                    ||nom.getText().equals("")
+                    ||prenom.getText().equals("")
+                    ||username.getText().equals("")
+                    ||pswd.getText().equals("")
+                    ||addresse.getText().equals("")
+                    ||numero.getText().equals(""))
             {
                 if(Dialog.show("Informations manquantes",
                                    "Veuillez remplir tout les champs", 
@@ -87,19 +127,36 @@ public class ProfileForm {
                                    null))
                    {}
             }
-            else if (!email.getText().equals(Utilisateur.membre.getEmail())||!sexe.getSelectedItem().equals(Utilisateur.membre.getSexe())||!nom.getText().equals(Utilisateur.membre.getNom())||!prenom.getText().equals(Utilisateur.membre.getPrenom())||
-                     !username.getText().equals(Utilisateur.membre.getUsername())||!pswd.getText().equals(Utilisateur.membre.getPassword())||!addresse.getText().equals(Utilisateur.membre.getAddresse()))
+            else if (!email.getText().equals(Utilisateur.membre.getEmail())
+                    ||!sexe.getSelectedItem().equals(Utilisateur.membre.getSexe())
+                    ||!nom.getText().equals(Utilisateur.membre.getNom())
+                    ||!prenom.getText().equals(Utilisateur.membre.getPrenom())
+                    ||!username.getText().equals(Utilisateur.membre.getUsername())
+                    ||!pswd.getText().equals(Utilisateur.membre.getPassword())
+                    ||!addresse.getText().equals(Utilisateur.membre.getAddresse())
+                    ||!numero.getText().equals(""+Utilisateur.membre.getNumero())
+                    ||!fileNameInServer.equals(""))
             {
                 ServiceUtilisateur userservice = new ServiceUtilisateur();
-                Utilisateur newuser = new Utilisateur(nom.getText(), prenom.getText(), addresse.getText(), email.getText(), sexe.getSelectedItem(), Integer.parseInt(numero.getText()), avatar.getText(), pswd.getText(), username.getText());
+                String a="";
+                if(fileNameInServer.equals("")){
+                    a=membre.getAvatar();
+                }
+                else{
+                    a=fileNameInServer;
+                }
+                Utilisateur newuser = new Utilisateur(nom.getText(), prenom.getText(), addresse.getText(), email.getText(), sexe.getSelectedItem(), Integer.parseInt(numero.getText()), a , pswd.getText(), username.getText());
                 userservice.MAJUtilisateur(newuser);
                 newuser.setId(Utilisateur.membre.getId());
                 Utilisateur.membre=newuser;
+                fileNameInServer="";
                 if(Dialog.show("Informations mises à jour",
                                    "Vos données ont étés mises à jour", 
                                    "Ok", 
                                    null))
-                   {}
+                   {
+                       //affiche();
+                   }
             }
             else{
                 if(Dialog.show("Aucun changement",
@@ -110,6 +167,8 @@ public class ProfileForm {
             }
         }
         );
+        
+        MenuManager.createMenu(currentform, theme);
         currentform.show();
     }
     

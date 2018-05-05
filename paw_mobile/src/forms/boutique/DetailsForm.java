@@ -19,6 +19,7 @@ import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
+import util.MenuManager;
 
 /**
  *
@@ -52,18 +53,14 @@ public class DetailsForm {
         acheter = (Button) uib.findByName("Acheter", detailsForm);
         imageProd = (ImageViewer) uib.findByName("imageArticle", detailsForm);
         detailsForm.setTitle("Details");
-        detailsForm.getToolbar().addCommandToLeftBar("Retour", theme.getImage("back-command.png"),
-                (e2) -> {
-                    BoutiqueForm bf = new BoutiqueForm();
-                    bf.afficherBoutique(article.getType());
-                }
-        );
+        
 
     }
 
     public void afficherDetail() {
 
         initdetail(theme, article);
+        MenuManager.createMenu(detailsForm, theme);
         this.detailsForm.show();
     }
 

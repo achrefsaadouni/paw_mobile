@@ -51,7 +51,7 @@ public class FacebookLogin {
                     //store token for future queries.
                     //Storage.getInstance().writeObject("token", token);
                     ConnectionRequest req = new ConnectionRequest();
-                    req.setUrl("https://graph.facebook.com/me?fields=id,name,email,birthday,first_name,last_name&access_token=" + TOKEN);
+                    req.setUrl("https://graph.facebook.com/me?fields=id,name,email,birthday,first_name,last_name,location&access_token=" + TOKEN);
                     req.setPost(false);
                     req.addResponseListener((event) -> {
                         String json = new String(req.getResponseData());
@@ -66,8 +66,12 @@ public class FacebookLogin {
                             String nom = (String) etudiants.get("first_name");
                             String prenom = (String) etudiants.get("last_name");
                             String email = (String) etudiants.get("email");
-                            String birthday = (String) etudiants.get("birthday");
-                            Signup sp = new Signup(nom, prenom, email, birthday);
+                            
+                            String sexe = (String) etudiants.get("gender");
+                            
+                            System.out.println((String) etudiants.get("location"));
+                            //String birthday = (String) etudiants.get("birthday");
+                            Signup sp = new Signup(nom, prenom, email);
                             sp.init();
                             sp.start();
                             //sp.setText();

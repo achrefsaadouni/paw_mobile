@@ -5,10 +5,9 @@
  */
 package Entity;
 
-//import java.io.File;
-//import java.util.Date;
+
 import com.codename1.io.File;
-//import java.util.Objects;
+
 
 /**
  *
@@ -17,13 +16,12 @@ import com.codename1.io.File;
 public class AnnonceTrouvee extends Annonce {
     
     private String colier ; 
-   // private Date date_trouvee ; 
     private String lieu_trouve ; 
-     public AnnonceTrouvee(String colier,  String lieu_trouve, int id, int age, String couleur, String sex, String race, String message_complementaire, String type,String images) {
-        super(id, age, couleur, sex, race, message_complementaire, type,images);
+     public AnnonceTrouvee(String colier,  String lieu_trouve, int id, int age, String couleur, String sex, String race, String message_complementaire, String type,String images,int id_utilisateur) {
+        super(id, age, couleur, sex, race, message_complementaire, type,images,id_utilisateur);
         this.colier = colier;
-      //  this.date_trouvee = date_trouvee;
         this.lieu_trouve = lieu_trouve;
+        
     }
     
 

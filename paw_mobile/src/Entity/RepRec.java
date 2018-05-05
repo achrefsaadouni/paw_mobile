@@ -22,6 +22,11 @@ public class RepRec {
         this.text = text;
     }
 
+    public RepRec() {
+    }
+
+    
+    
     public RepRec(int id, int id_reclamation, String text, Date date) {
         this.id = id;
         this.id_reclamation = id_reclamation;

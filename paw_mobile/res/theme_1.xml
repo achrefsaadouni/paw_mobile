@@ -227,6 +227,7 @@
     <image name="cancel (4).png1"  />
     <image name="cart (3).png"  />
     <image name="cart (3).png1"  />
+    <image name="cart_menu.png"  />
     <image name="change.png"  />
     <image name="change.png1"  />
     <image name="chat-bubble-left.png"  />
@@ -491,6 +492,8 @@
     <image name="Dialog.borderTopR_1.png4" type="multi"  />
     <image name="Dialog.borderTopR_1.png5" type="multi"  />
     <image name="distance.png"  />
+    <image name="dog-training.png"  />
+    <image name="doglove.jpg"  />
     <image name="duke-no-logos.png" type="multi"  />
     <image name="duke-no-logos.png1"  />
     <image name="duke-no-logos.png2" type="multi"  />
@@ -507,6 +510,7 @@
     <image name="eventTitleUnderline.png1"  />
     <image name="eventTitleUnderline2.png"  />
     <image name="eventTitleUnderline2.png1"  />
+    <image name="fa.png"  />
     <image name="facebook.png"  />
     <image name="favorite (1).png"  />
     <image name="favorite (1).png1"  />
@@ -516,6 +520,7 @@
     <image name="glare_light_spots_bright_47388_1920x1080.jpg"  />
     <image name="hiker.png"  />
     <image name="hiker.png1"  />
+    <image name="homepage.png"  />
     <image name="image.png"  />
     <ui name="inbox" />
     <image name="info.png"  />
@@ -535,6 +540,7 @@
     <image name="inputs-back.png"  />
     <image name="inputs-back.png1"  />
     <image name="inputsuccess.png"  />
+    <image name="inst.jpg"  />
     <image name="items.png"  />
     <image name="items.png1"  />
     <image name="key.png"  />
@@ -547,6 +553,8 @@
     <image name="light_purple_spots_1440x900.jpg"  />
     <image name="login.png"  />
     <image name="login.png1"  />
+    <image name="logo_menu.png"  />
+    <image name="lost.png"  />
     <image name="Menu.borderBottom_2.png" type="multi"  />
     <image name="Menu.borderBottom_2.png1" type="multi"  />
     <image name="Menu.borderBottom_2.png11" type="multi"  />
@@ -692,6 +700,7 @@
     <image name="new.png"  />
     <image name="new.png1"  />
     <ui name="newMessage" />
+    <image name="note.png"  />
     <image name="OKGR.borderBottom_1.png" type="multi"  />
     <image name="OKGR.borderBottom_1.png1" type="multi"  />
     <image name="OKGR.borderBottom_1.png11" type="multi"  />
@@ -843,6 +852,7 @@
     <image name="separatorpurple.png"  />
     <image name="separatorpurple.png1"  />
     <image name="sepplanning.png"  />
+    <image name="shop.png"  />
     <image name="shopping-bag (1).png"  />
     <image name="shopping-bag (1).png1"  />
     <image name="shopping-bag.png"  />
@@ -854,6 +864,8 @@
     <image name="shopping-store.png"  />
     <image name="shopping-store.png1"  />
     <ui name="Signalisation" />
+    <image name="site.png"  />
+    <image name="sitting-dog.png"  />
     <image name="sliderBlueCenter.png" type="multi"  />
     <image name="sliderBlueCenter.png1" type="multi"  />
     <image name="sliderBlueCenter.png11" type="multi"  />
@@ -940,6 +952,7 @@
     <image name="switch_on.png3" type="multi"  />
     <image name="switch_on.png4" type="multi"  />
     <image name="switch_on.png5" type="multi"  />
+    <image name="syringe.png"  />
     <image name="tab_courante.png"  />
     <image name="tab_courante.png1"  />
     <image name="target.png"  />
@@ -996,6 +1009,8 @@
         <font key="BgAchats.font" type="system" face="0" style="1" size="8" />
         <val key="BgAchats.margin" value="0,0,0,0" />
         <val key="BgAchats.padding" value="0,0,0,0" />
+        <val key="BgApp.bgImage" value="bg.png" />
+        <val key="BgApp.bgType" value="1" />
         <font key="BgApp.font" type="system" face="0" style="0" size="0" />
         <val key="BgApp.margin" value="0,0,0,0" />
         <val key="BgApp.padding" value="0,0,0,0" />
@@ -1705,10 +1720,8 @@
         <val key="SideCommand.sel#transparency" value="0" />
         <val key="SideCommand.textDecoration" value="0" />
         <val key="SideNavigationPanel.align" value="3" />
-        <val key="SideNavigationPanel.bgImage" value="bg.png" />
-        <val key="SideNavigationPanel.bgType" value="34" />
         <val key="SideNavigationPanel.padUnit" value="1,0,0,0" />
-        <val key="SideNavigationPanel.padding" value="0,0,0,0" />
+        <val key="SideNavigationPanel.padding" value="7,9,11,6" />
         <val key="SideNavigationPanel.transparency" value="255" />
         <gradient key="Slider.bgGradient" color1="0" color2="0" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Slider.bgType" value="0" />
@@ -1756,6 +1769,8 @@
         <val key="SpanText.padding" value="0,0,0,0" />
         <val key="SpanText.transparency" value="255" />
         <val key="Tab.bgColor" value="5bc8fb" />
+        <val key="Tab.bgImage" value="11.png" />
+        <val key="Tab.bgType" value="1" />
         <border key="Tab.border" type="line" thickness="1" color="16777215" />
         <val key="Tab.fgColor" value="ffffff" />
         <font key="Tab.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
@@ -1990,7 +2005,7 @@
         <font key="BgAchats.font" type="system" face="0" style="1" size="8" />
         <val key="BgAchats.margin" value="0,0,0,0" />
         <val key="BgAchats.padding" value="0,0,0,0" />
-        <val key="BgApp.bgImage" value="BgBoutique.png" />
+        <val key="BgApp.bgImage" value="bg.png" />
         <val key="BgApp.bgType" value="33" />
         <font key="BgApp.font" type="system" face="0" style="0" size="0" />
         <val key="BgApp.margin" value="0,0,0,0" />

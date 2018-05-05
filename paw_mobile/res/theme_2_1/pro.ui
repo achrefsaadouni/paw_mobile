@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="pro" cloudDestinationProperty="pro" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="0" title="Profile" >
+  <component type="ImageViewer" name="ImageViewer" cloudDestinationProperty="ImageViewer" >
+    <custom name="image" />
+  </component>
+  <component type="Label" name="Label" cloudDestinationProperty="Label" text="Nom" >
+  </component>
+</component>

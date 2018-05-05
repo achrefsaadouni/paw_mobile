@@ -20,6 +20,7 @@ import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import com.mycompany.myapp.MyApplication;
 import service.ServiceReclamation;
+import util.MenuManager;
 
 /**
  *
@@ -100,6 +101,7 @@ public class AjoutFeedBackForm {
     }
     
     public void afficher() {
+        MenuManager.createMenu(currentform, theme);
         currentform.show();
     }    
 }

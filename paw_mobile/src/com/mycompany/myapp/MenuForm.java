@@ -5,20 +5,16 @@
  */
 package com.mycompany.myapp;
 
+import com.codename1.components.ImageViewer;
+import com.codename1.ui.Button;
 import static com.codename1.ui.CN.execute;
-import static com.codename1.ui.CN.isNativeShareSupported;
-import static com.codename1.ui.CN.share;
-import com.codename1.ui.Dialog;
-import com.codename1.ui.FontImage;
+import com.codename1.ui.Container;
+
 import com.codename1.ui.Form;
+import com.codename1.ui.Label;
+import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
-import forms.FeedBack.AjoutFeedBackForm;
-import forms.boutique.BoutiqueForm;
-import forms.boutique.PanierForm;
-import forms.annonceAmine.Ajout;
-import forms.boutique.MesAchatsForm;
-import forms.utilisateur.ProfileForm;
 import util.MenuManager;
 
 /**
@@ -31,9 +27,43 @@ public class MenuForm {
     Resources theme;
 
     public MenuForm(Resources theme) {
-        f = new Form ("Acceuil");
+        f = new Form ("Acceuil",new BoxLayout(BoxLayout.Y_AXIS));
         this.theme = theme;
+        Container c1 = new Container (new BoxLayout(BoxLayout.Y_AXIS));
+        ImageViewer image = new ImageViewer(theme.getImage("logo_menu.png"));
+        Label l = new Label("              Bienvenu sur Paw");
+        c1.add(l);
+        c1.add(image);
+        f.add(c1);
+        Container c2 = new Container (new BoxLayout(BoxLayout.X_AXIS));
+        Label l1 = new Label("Visitez Aussi");
+         Button b = new Button(theme.getImage("fa.png"));
+            b.setUIID("WhiteButton2");
+            b.addActionListener((evt) -> {
          
+                 execute("https://www.facebook.com/Boutique-Paw-753236058199700");
+
+            });
+             Button b1 = new Button(theme.getImage("inst.jpg"));
+            b1.setUIID("WhiteButton2");
+            b1.addActionListener((evt) -> {
+         
+                 execute("https://www.instagram.com/pawzcorporation/?hl=fr");
+
+            });
+            
+               Button b2 = new Button(theme.getImage("site.png"));
+            b2.setUIID("WhiteButton2");
+            b2.addActionListener((evt) -> {
+         
+                 execute("http://localhost/paw_web/web/app_dev.php/index");
+
+            });
+            c2.add(l1);
+            c2.add(b);
+            c2.add(b1);
+            c2.add(b2);
+            f.add(c2);
     }
     
     public void affiche()

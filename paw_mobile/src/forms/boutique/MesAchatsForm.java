@@ -18,6 +18,7 @@ import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import com.mycompany.myapp.MenuForm;
 import service.ServiceAchat;
+import util.MenuManager;
 
 /**
  *
@@ -145,6 +146,7 @@ public class MesAchatsForm {
 public void affiche() {
 
         init();
+        MenuManager.createMenu(achatsForm, theme);
         achatsForm.show();
     }
 

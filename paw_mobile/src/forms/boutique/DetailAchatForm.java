@@ -24,6 +24,7 @@ import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.ui.util.UIBuilder;
 import java.util.List;
+import util.MenuManager;
 
 /**
  *
@@ -54,7 +55,7 @@ public class DetailAchatForm {
     
     
     public DetailAchatForm(Resources theme,List<LigneAchat>ligne) {
-            this.theme = UIManager.initFirstTheme("/theme_1");
+        this.theme = UIManager.initFirstTheme("/theme_1");
         this.ligne = ligne;
         this.theme = theme;
         uib = new UIBuilder();
@@ -139,6 +140,7 @@ public class DetailAchatForm {
 
     public void affiche() {
         init();
+        MenuManager.createMenu(detailachat, theme);
         detailachat.show();
     }
 

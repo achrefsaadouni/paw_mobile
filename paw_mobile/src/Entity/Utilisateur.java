@@ -121,7 +121,7 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return ("{"+id+":"+nom+":"+prenom+":"+addresse+":"+email+":"+username+":"+password+":"+role+":"+numero+"}");
+        return ("{id:"+id+"**nom:"+nom+"**prenom:"+prenom+"**adresse:"+addresse+"**email:"+email+"**username:"+username+"**password:"+password+"**numero:"+numero+"}");
     }
 
     @Override

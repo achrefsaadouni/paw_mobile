@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="Signup" cloudDestinationProperty="Signup" uiid="Logins" scrollVisible="false" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="TextField" name="nom" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" hint="Nom" >
+  </component>
+  <component type="TextField" name="prenom" cloudBoundProperty="text" cloudDestinationProperty="TextField1" text="" hint="Prenom" >
+  </component>
+  <component type="TextField" name="email" cloudBoundProperty="text" cloudDestinationProperty="TextField2" text="" constraint="1" hint="Email" >
+  </component>
+  <component type="TextField" name="username" cloudBoundProperty="text" cloudDestinationProperty="TextField2" text="" constraint="0" hint="Username" >
+  </component>
+  <component type="TextField" name="mdp" cloudBoundProperty="text" cloudDestinationProperty="TextField3" text="" constraint="65536" hint="Mot de pass" >
+  </component>
+  <component type="TextField" name="addresse" cloudBoundProperty="text" cloudDestinationProperty="TextField1" text="" hint="Adresse" >
+  </component>
+  <component type="TextField" name="numero" cloudBoundProperty="text" cloudDestinationProperty="TextField2" text="" constraint="3" hint="Num&#xe9;ro" >
+  </component>
+  <component type="Button" name="choisirImage" cloudDestinationProperty="choisirImage" text="Choisissez votre avatar" >
+  </component>
+  <component type="ComboBox" name="sexe" cloudDestinationProperty="sexe" >
+    <stringItem value="Homme" />
+    <stringItem value="Femme" />
+  </component>
+  <component type="Button" name="sinscrire" cloudDestinationProperty="sinscrire" text="S'inscrire" icon="thumb-up.png" >
+  </component>
+</component>

@@ -50,6 +50,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import rest.file.uploader.tn.FileUploader;
 import service.ServiceAnnonceTrouvee;
+import util.MenuManager;
 
 /**
  *
@@ -116,9 +117,7 @@ public class Ajout {
         btnajout = new Button("Valider");
         choisirImage = new Button("Choisir image");
         c3.add(btnajout) ; 
-        c3.add(choisirImage) ; 
-        btnaff=new Button("Affichage");
-        mesAnnonces= new Button ("Mes Annonces") ;             
+        c3.add(choisirImage) ;           
         f.add(colier);
         f.add(lieu_trouvee);
         f.add(age);
@@ -126,45 +125,9 @@ public class Ajout {
         f.add(race);
         f.add(message);
         f.add(c3) ; 
-        f.add(btnaff);
-        f.add(mesAnnonces) ;   
+  
         
-      
-        
-        
-        mesAnnonces.addActionListener(l->{
-        Form f9 = new Form("Mes Annonces" , new BoxLayout(BoxLayout.Y_AXIS)) ; 
-         
-        
-          
-         ImageViewer imageAnnonceTr=new ImageViewer();
-            ServiceAnnonceTrouvee ServiceAnnonceTrouvee = new ServiceAnnonceTrouvee();
-              
-            ArrayList<AnnonceTrouvee> lis = ServiceAnnonceTrouvee.getList2();
-            for (AnnonceTrouvee ed : lis)
-            { 
-           Button supprimer =new Button("Supprimer" ) ;
-           Button modifier = new Button("Modifier") ;
-                
-                f9.add(afficherMesAnnonces(ed));
-                
-                f9.add(modifier) ; 
-                f9.add(supprimer) ; 
-              }
-          
-    
-            
-          
-           
-            
-        
-            
-            
-            f9.show(); 
-        
-        
-        });
-        
+     
         
         
         choisirImage.addActionListener(new ActionListener() {
@@ -227,12 +190,17 @@ public class Ajout {
                 case 3 : animal="Rongeur";
             }
             System.out.println(combo.getModel().getSelectedIndex());
-               
-            AnnonceTrouvee t = new AnnonceTrouvee(colier.getText(),lieu_trouvee.getText(),0,Integer.valueOf(age.getText()),couleur.getText(),sexe,race.getText(),message.getText(),animal,fileNameInServer);
+               if(Integer.parseInt(age.getText())>0 && !colier.getText().equals("") && !lieu_trouvee.getText().equals("") && !couleur.getText().equals("")&& !race.getText().equals("") && !message.getText().equals(""))
+                {
+            AnnonceTrouvee t = new AnnonceTrouvee(colier.getText(),lieu_trouvee.getText(),0,Integer.valueOf(age.getText()),couleur.getText(),sexe,race.getText(),message.getText(),animal,fileNameInServer,Utilisateur.membre.getId());
             System.out.println(t.getImages());
             System.out.println(fileNameInServer);
             ser.ajoutAnnonceTrouvee(t);
-            
+                }
+               
+  else
+                    Dialog.show("Erreur", "L'age est negatif ou bien vous avez un champs vide", "OK", "");
+                    
 
         });
         
@@ -292,10 +260,134 @@ public class Ajout {
             }
         });
         f.add(avatar) ;
-        btnaff.addActionListener((e)->{
+  
+        
+        f.getToolbar().addCommandToOverflowMenu("Affichers Toutes Les Annonces", null, (e)
+                -> {
         Affichage1 a=new Affichage1(theme);
         a.getF().show();
-        });
+        }
+        );
+        
+        
+           f.getToolbar().addCommandToOverflowMenu("Affichers Mes Annonces", null, (e)
+                -> {
+         Form f9 = new Form("Mes Annonces" , new BoxLayout(BoxLayout.Y_AXIS)) ; 
+         
+        
+          
+         ImageViewer imageAnnonceTr=new ImageViewer();
+            ServiceAnnonceTrouvee ServiceAnnonceTrouvee = new ServiceAnnonceTrouvee();
+              
+            ArrayList<AnnonceTrouvee> lis = ServiceAnnonceTrouvee.getList2();
+            for (AnnonceTrouvee ed : lis)
+            { 
+           Button supprimer =new Button("Supprimer" ) ;
+           Button modifier = new Button("Modifier") ;
+                
+                f9.add(afficherMesAnnonces(ed));
+                
+                f9.add(modifier) ; 
+                f9.add(supprimer) ; 
+                modifier.addActionListener(jj->{
+            Dialog dlg = new Dialog(" edit") ;
+            Button confirm = new Button("confirm edit") ;
+            Button exit = new Button ("Exit") ; 
+         Container cc2 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+         Container cc3 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+         Container cc4 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+         Container cc5 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+         Container cc6 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+         Container cc7 = new Container(new BoxLayout(BoxLayout.X_AXIS)) ;
+            Label lieu69= new Label ("Lieux Trouvés :") ; 
+            Label sexe69= new Label ("Sexe : ") ; 
+            Label race69 = new Label ("Race :") ; 
+            Label couleur69=new Label ("Couleur : ") ; 
+            Label msg69=new Label("Message Comp : ") ; 
+            Label colier69 = new Label("Colier :") ; 
+            TextField  lieuxkl = new TextField(ed.getLieu_trouve()) ; 
+            TextField sexe12 = new TextField(ed.getSex()) ; 
+            TextField race12 = new TextField(ed.getRace()) ; 
+            TextField couleur12 = new TextField(ed.getCouleur()) ; 
+            TextField msg12 = new TextField(ed.getMessage_complementaire()) ;
+            TextField colier12 = new TextField(ed.getColier()) ;
+             lieuxkl.setText(ed.getLieu_trouve());
+            sexe12.setText(ed.getSex()) ;
+            race12.setText(ed.getRace());
+            couleur12.setText(ed.getCouleur()) ;
+            msg12.setText(ed.getMessage_complementaire());
+            colier12.setText(ed.getColier()) ; 
+            cc2.add(lieu69) ; 
+            cc2.add(lieuxkl) ; 
+            dlg.add(cc2) ;
+            cc3.add(sexe69) ;
+            cc3.add(sexe12) ; 
+            dlg.add(cc3) ;
+            cc4.add(race69) ;
+            cc4.add(race12) ; 
+            dlg.add(cc4) ;
+            cc5.add(couleur69) ;
+            cc5.add(couleur12) ; 
+            dlg.add(cc5) ; 
+            cc6.add(msg69) ;
+            cc6.add(msg12) ;
+            dlg.add(cc6) ; 
+            cc7.add(colier69) ; 
+            cc7.add(colier12) ; 
+            dlg.add(cc7) ; 
+            dlg.add(confirm);
+            dlg.add(exit) ; 
+            confirm.addActionListener(ty->{
+            
+              ServiceAnnonceTrouvee ann = new ServiceAnnonceTrouvee() ; 
+
+              ann.modifier(ed.getId(),lieuxkl.getText(),sexe12.getText(), race12.getText(),couleur12.getText(),msg12.getText(),colier12.getText());
+            
+            
+            });
+            
+            
+            exit.addActionListener(rr->{
+            
+            f9.show();
+            });
+            
+            
+            
+            
+            dlg.show();
+            
+                
+                });
+                
+          
+            
+           supprimer.addActionListener(kl->{
+           ServiceAnnonceTrouvee ann = new ServiceAnnonceTrouvee() ; 
+           ann.supprimer1(ed.getId());
+           
+           });
+           
+               
+                
+                
+              }
+          
+    
+            
+          
+           
+            
+        
+            
+            MenuManager.createMenu(f9, theme);
+            f9.show(); 
+        }
+        );
+        
+        
+        
+        MenuManager.createMenu(f, theme);
 
     }
     

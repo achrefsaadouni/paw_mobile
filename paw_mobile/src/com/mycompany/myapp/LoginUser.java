@@ -44,14 +44,12 @@ class LoginUser {
         Button connexion = (Button) ui.findByName("connexion", form.getContentPane());
         Button connexionfacebook = (Button) ui.findByName("Facebook", form.getContentPane());
         Button sinscrire = (Button) ui.findByName("signup", form.getContentPane());
-        //        form.add(connexionfacebook);
+
         connexionfacebook.addActionListener(lll->{
-            System.out.println("houniiiiii");
             FacebookLogin.signIn();
         });
         connexion.addActionListener(l -> {
             ServiceUtilisateur service = new ServiceUtilisateur();
-            //service.getList2().toString();
             ArrayList<Utilisateur>  liste = service.getList2();
             liste.size();
             int x =0;
@@ -67,7 +65,7 @@ class LoginUser {
             }
             if (x==1)
             {
-            this.theme = UIManager.initNamedTheme("/theme_1", "Theme 1");
+               this.theme = UIManager.initFirstTheme("/theme_1");
                MenuForm mf = new MenuForm(theme);
                mf.affiche();
             }

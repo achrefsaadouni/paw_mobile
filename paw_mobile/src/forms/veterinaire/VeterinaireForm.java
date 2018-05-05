@@ -7,6 +7,8 @@ package forms.veterinaire;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Form;
+import com.codename1.ui.util.Resources;
+import util.MenuManager;
 
 /**
  *
@@ -14,10 +16,11 @@ import com.codename1.ui.Form;
  */
 public class VeterinaireForm {
     Form f;
-
+    Resources theme;
     Button btnajout,btnaff;
 
-    public VeterinaireForm() {
+    public VeterinaireForm(Resources theme) {
+        this.theme = theme;
         f = new Form("home");
 
         btnaff=new Button("Affichage");
@@ -28,12 +31,13 @@ public class VeterinaireForm {
 
 //        });
         btnaff.addActionListener((e)->{
-        AfficheVeterinaire a = new AfficheVeterinaire();
+        AfficheVeterinaire a = new AfficheVeterinaire(theme);
         a.getF().show();
         });
     }
 
     public Form getF() {
+        MenuManager.createMenu(f, theme);
         return f;
     }
 
