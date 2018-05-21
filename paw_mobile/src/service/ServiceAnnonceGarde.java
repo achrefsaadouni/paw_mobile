@@ -54,7 +54,7 @@ public class ServiceAnnonceGarde {
 
                 float id = Float.parseFloat(obj.get("id").toString());
                 float age = Float.parseFloat(obj.get("age").toString());
-                float dure = Float.parseFloat(obj.get("dureSit").toString());
+                float dure = Float.parseFloat(obj.get("duresit").toString());
                 
                 System.out.println(id);
                 e.setId((int)id);
@@ -84,7 +84,7 @@ public class ServiceAnnonceGarde {
     
     public ArrayList<AnnonceGarde> getList(){       
         ConnectionRequest con = new ConnectionRequest();
-        con.setUrl("http://localhost/paw_web/web/app_dev.php/getListDressage");  
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/getListGarde");  
         con.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {

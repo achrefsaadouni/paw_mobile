@@ -85,7 +85,7 @@ public class SignupFb {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 try{
-                    FileUploader fu = new FileUploader("http://localhost/paw_web/web/images/");
+                    FileUploader fu = new FileUploader("http://localhost/paw_web/web/images/pawUsers");
                     
                     Display.getInstance().openGallery(new ActionListener() {
                         @Override

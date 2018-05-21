@@ -13,6 +13,7 @@ import com.codename1.io.NetworkManager;
 import com.codename1.ui.events.ActionListener;
 import Entity.Reclamation;
 import Entity.RepRec;
+import Entity.Utilisateur;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,8 +28,9 @@ public class ServiceReclamation {
 
     public void ajoutReclamation(Reclamation ta) {
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost/paw_web/web/app_dev.php/api/AjoutFeedBack?objet=" + ta.getObjet() + "&text=" + ta.getText()+ "&type=" + ta.getType()+ "&utilisateur=" + ta.getUtilisateur();
+        String Url = "http://localhost/paw_web/web/app_dev.php/api/AjoutFeedBack?objet=" + ta.getObjet() + "&text=" + ta.getText()+ "&type=" + ta.getType()+ "&utilisateur=" + Utilisateur.membre.getId();
         con.setUrl(Url);
+        System.out.println(Url);
         System.out.println(Url);
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());

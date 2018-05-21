@@ -50,26 +50,18 @@ class LoginUser {
         });
         connexion.addActionListener(l -> {
             ServiceUtilisateur service = new ServiceUtilisateur();
-            ArrayList<Utilisateur>  liste = service.getList2();
-            liste.size();
-            int x =0;
-            for (Iterator<Utilisateur> iterator = liste.iterator(); iterator.hasNext();) {
-                Utilisateur next = iterator.next();
-                if (next.getUsername().equals(username.getText()) 
-                        //&& next.getPassword()== password.getText()
-                        )
-                {
-                   membre=next ;
-                   x=1;
-                }
-            }
-            if (x==1)
+            Utilisateur uuu = new Utilisateur();
+            
+            
+
+            if (service.getUser(username.getText(), pswd.getText())!=null)
             {
+                membre=service.getUser(username.getText(), pswd.getText());
                this.theme = UIManager.initFirstTheme("/theme_1");
                MenuForm mf = new MenuForm(theme);
                mf.affiche();
             }
-            else if (x==0)
+            else
             {
                     if(Dialog.show("Invalid Credentials",
                                     "Username ou mot de passe erroné", 
@@ -98,5 +90,5 @@ class LoginUser {
     void start() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

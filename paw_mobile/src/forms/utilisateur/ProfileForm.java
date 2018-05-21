@@ -90,8 +90,7 @@ public class ProfileForm {
                 }
             }
         });
-        TextField pswd = (TextField) ui.findByName("mdp", currentform.getContentPane());
-        pswd.setText(Utilisateur.membre.getPassword());
+
         ComboBox<String> sexe = (ComboBox<String>) ui.findByName("sexe", currentform.getContentPane());
         sexe.setSelectedItem(Utilisateur.membre.getSexe());
         
@@ -117,7 +116,6 @@ public class ProfileForm {
                     ||nom.getText().equals("")
                     ||prenom.getText().equals("")
                     ||username.getText().equals("")
-                    ||pswd.getText().equals("")
                     ||addresse.getText().equals("")
                     ||numero.getText().equals(""))
             {
@@ -132,7 +130,6 @@ public class ProfileForm {
                     ||!nom.getText().equals(Utilisateur.membre.getNom())
                     ||!prenom.getText().equals(Utilisateur.membre.getPrenom())
                     ||!username.getText().equals(Utilisateur.membre.getUsername())
-                    ||!pswd.getText().equals(Utilisateur.membre.getPassword())
                     ||!addresse.getText().equals(Utilisateur.membre.getAddresse())
                     ||!numero.getText().equals(""+Utilisateur.membre.getNumero())
                     ||!fileNameInServer.equals(""))
@@ -145,7 +142,7 @@ public class ProfileForm {
                 else{
                     a=fileNameInServer;
                 }
-                Utilisateur newuser = new Utilisateur(nom.getText(), prenom.getText(), addresse.getText(), email.getText(), sexe.getSelectedItem(), Integer.parseInt(numero.getText()), a , pswd.getText(), username.getText());
+                Utilisateur newuser = new Utilisateur(nom.getText(), prenom.getText(), addresse.getText(), email.getText(), sexe.getSelectedItem(), Integer.parseInt(numero.getText()), a , "", username.getText());
                 userservice.MAJUtilisateur(newuser);
                 newuser.setId(Utilisateur.membre.getId());
                 Utilisateur.membre=newuser;

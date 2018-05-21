@@ -27,6 +27,7 @@ public class ServiceUtilisateur {
         ConnectionRequest con = new ConnectionRequest();
         String Url = "http://localhost/paw_web/web/app_dev.php/api/Inscription?nom=" + ta.getNom() + "&prenom=" + ta.getPrenom()+ "&adresse=" + ta.getAddresse()+ "&email=" + ta.getEmail()+ "&sexe=" + ta.getSexe()+ "&username=" + ta.getUsername()+ "&numero=" + ta.getNumero()+ "&avatar=" + ta.getAvatar()+ "&password=" + ta.getPassword();
         con.setUrl(Url);
+        System.out.println(Url);
         con.addResponseListener((e) -> {
             String str = new String(con.getResponseData());
         });
@@ -91,6 +92,52 @@ public class ServiceUtilisateur {
         });
         NetworkManager.getInstance().addToQueueAndWait(con);
         return listUtilisateurs;
+    }
+    
+    public Utilisateur getUser(String username,String password){       
+        ConnectionRequest con = new ConnectionRequest();
+        con.setUrl("http://localhost/paw_web/web/app_dev.php/api/UserCol?username="+username+"&password="+password);   
+        //Utilisateur ui=null;
+        System.out.println("http://localhost/paw_web/web/app_dev.php/api/UserCol?username="+username+"&password="+password);
+        con.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                ServiceUtilisateur ser = new ServiceUtilisateur();
+                 ui= ser.getThisUser(new String(con.getResponseData()));
+            }
+        });
+        NetworkManager.getInstance().addToQueueAndWait(con);
+        return ui;
+    }
+    Utilisateur ui ;
+    public Utilisateur getThisUser(String json) {
+
+        try {
+            JSONParser j = new JSONParser();
+
+            Map<String, Object> etudiants = j.parseJSON(new CharArrayReader(json.toCharArray()));  
+            System.out.println(etudiants);
+                Utilisateur e = new Utilisateur();
+                float id = Float.parseFloat(etudiants.get("id").toString());
+                System.out.println(id);
+                float numero = Float.parseFloat(etudiants.get("numero").toString());
+                e.setId((int) id);
+                e.setNumero((int) numero);
+                e.setAdresse(etudiants.get("addresse").toString());
+                e.setPrenom(etudiants.get("prenom").toString());
+                e.setNom(etudiants.get("nom").toString());
+                e.setSexe(etudiants.get("sexe").toString());
+                e.setEmail(etudiants.get("email").toString());
+                e.setAvatar(etudiants.get("avatar").toString());
+                e.setUsername(etudiants.get("username").toString());
+                e.setPassword(etudiants.get("password").toString());
+                return e;
+
+        } catch (Exception ex) {
+            return null;
+        }
+        
+
     }
 
 }
